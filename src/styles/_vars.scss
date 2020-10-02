@@ -1,0 +1,34 @@
+/*
+ * Fond = `#2e5849`
+ * Fond Input = `#1c382f`
+ * Bordure Input = `#183129`
+ * Ombre interne Input = `25px` `rgba(0,0,0,.1)`
+ * Ombre interne Input Focus = `25px` `rgba(0,0,0,.5)`
+ * Texte Input = `#fff`
+ * Placeholder Input = `rgba(255, 255, 255, .5)`
+ * Fond Tâche = `#eee`
+ * Bordure tâche = `#ccc`
+ */
+
+// Base colors
+$white: #fff;
+
+// General purpose
+$text-color: #333;
+$border-color: #ccc;
+$background-color: #2e5849;
+
+// Main input (add task)
+$input-background-color: #1c382f;
+$input-border-color: #183129;
+$input-shadow-color: rgba(0,0,0,.1);
+$input-shadow-focus-color: rgba(0,0,0,.5);
+$input-text-color: $white;
+$input-placeholder-color: rgba(255, 255, 255, .5);
+
+// Task
+$task-background-color: #eee;
+$task-border-color: $border-color;
+
+/* Numerical values */
+$input-shadow-thickness: 25px;
