@@ -2,6 +2,7 @@ html, body {
   font-family: Helvetica Neue,Arial,Helvetica,sans-serif;
   background-color:#F2F7F7;
   color:  #858585;
+  width: 100%;
 
   & #root {
     height: 100%;
@@ -14,11 +15,15 @@ html, body {
   margin: auto;
   text-align: center;
 }
+
+
 // Pour la gestion du header horizontal
 .header-horizontal {
   display: flex;
-  border-bottom:  solid black 1px;
-  height: 7em;
+  border-bottom:  1px solid rgba(34,36,38,.15);
+  height: 5em;
+  justify-content: space-around;
+  margin-left: -3em;
 
   & .my-logo {
     
@@ -27,19 +32,27 @@ html, body {
   & .menu-button {
     display: flex;
     height: 100%;
-    width: 20%;
-    border-right:  solid 1px solid;
-    padding: 1em;
-    flex-direction: column;
+    border-right:  1px solid rgba(34,36,38,.15);
+    padding: 1em 1em 0 0;
+    margin-left: -2em;
   }
 
-  & .all-bar {
-    display: inline-grid;
-    margin: 1em;
+  & .menu-bar {
+    display: flex;
+    align-items: center;
   }
 
-  & .bar1 {
+  & .menu {
+    display: flex;
+    align-items: center;
+  }
+  
+  & .contact-logo {
+  }
 
+  & #logo-list {
+    display: flex;
+    width: 100%;
   }
 }
 // Pour la gestion de mon profil 
@@ -66,4 +79,8 @@ height: 100%;
   }
 } 
 
+.ui.inverted.segment, .ui.primary.inverted.segment {
+  background: #F2F7F7;
+  color: #858585;
+}
 

@@ -17,19 +17,11 @@ import './styles.scss';
 const Site = () => {
   // Pour le chargement asynchrone des résultats 
   const [loading, setLoading] = useState(false);
-  const cleanDataContact = personnalData.contact.map((c) => {
-    return {
-      phone: c.phone,
-      linkedin: c.linkedin,
-      github: c.github,
-      mail: c.mail,
-    }
-  });
 
   return (
     <div className="app">
       <HeaderLeft />
-      <Header contact={cleanDataContact}/>
+      <Header />
       {/* <Profil 
         picture={personnalData.author}
         birthday={personnalData.birthday}
