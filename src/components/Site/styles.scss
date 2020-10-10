@@ -1,16 +1,69 @@
+html, body {
+  font-family: Helvetica Neue,Arial,Helvetica,sans-serif;
+  background-color:#F2F7F7;
+  color:  #858585;
+
+  & #root {
+    height: 100%;
+  }
+}
+
 .app {
-  width: 500px;
-  margin: 1em auto;
+  width: 100%;
+  height: 100%;
+  margin: auto;
   text-align: center;
 }
+// Pour la gestion du header horizontal
+.header-horizontal {
+  display: flex;
+  border-bottom:  solid black 1px;
+  height: 7em;
 
-#react {
-  max-width: 8em;
-  transition-duration:2s;
-  transition-timing-function:ease;
+  & .my-logo {
+    
+  }
+
+  & .menu-button {
+    display: flex;
+    height: 100%;
+    width: 20%;
+    border-right:  solid 1px solid;
+    padding: 1em;
+    flex-direction: column;
+  }
+
+  & .all-bar {
+    display: inline-grid;
+    margin: 1em;
+  }
+
+  & .bar1 {
+
+  }
+}
+// Pour la gestion de mon profil 
+.ui.card {
 }
 
-img:hover#react {
-  transform:rotate(360deg);
+.ui.progress:last-child {
+  margin: 0px 27em 1.5em;
+}
+
+// Description du site
+.description {
+background-color: violet;
+height: 100%;
+  // Pour la gestion du logo react dynamique au passage de la souris 
+  & #react-logo {
+    max-width: 8em;
+    transition-duration:2s;
+    transition-timing-function:ease;
+  }
+  
+  & img:hover#react-logo {
+    transform:rotate(360deg);
+  }
 } 
+
 
