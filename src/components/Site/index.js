@@ -25,9 +25,7 @@ const Site = () => {
       mail: c.mail,
     }
   });
-  console.log(cleanDataContact);
 
-  
   return (
     <div className="app">
       <HeaderLeft />

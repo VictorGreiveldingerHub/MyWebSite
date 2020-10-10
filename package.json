@@ -47,6 +47,7 @@
     "webpack-merge": "*"
   },
   "dependencies": {
+    "hamburger-react": "^2.2.0",
     "prop-types": "*",
     "react": "^16.13.1",
     "react-dom": "*",

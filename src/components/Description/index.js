@@ -17,12 +17,12 @@ const Description = () => {
                 <Grid.Column>
                     <p> Une page pour mon CV </p>
                 </Grid.Column>
-                <Divider vertical>AND</Divider>
+                <Divider section vertical/>
 
                 <Grid.Column>
                     <p> Une page pour montrer quelques travaux </p>
                 </Grid.Column>
-                <Divider vertical>AND</Divider>
+                <Divider section vertical/>
                 <Grid.Column>
                     <p> Une page pour me contacter </p>
                 </Grid.Column>

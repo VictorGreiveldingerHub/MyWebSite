@@ -1,25 +1,18 @@
 import React from 'react';
+import { Spin as Hamburger } from 'hamburger-react'
 import MyLogo from 'src/assets/Images/Final.svg';
 
-const Header = ({ contacts }) => {
-    const contactsJSX = contacts.map((contact) => {
-        return (
-        <p>{contact.mail}</p>
-        );
-    });
-
+const Header = () => {
     return (
         <div className="header-horizontal">
             <div className="menu-button">
                 <div className="menu-bar">
-                    <div className="all-bar">
-                        <div className="bar1">--</div>
-                        <div className="bar">-</div>
-                        <div className="bar">-</div>
-                    </div>
-                    <button>
-                        <span className="menu-menu">MENU</span>
-                    </button>
+                    <Hamburger
+                        rounded
+                        label="MENU"
+                        size="20"
+                    />
+                    <span>MENU</span>                  
                 </div>
             </div>
             <div className="my-logo">
@@ -29,7 +22,7 @@ const Header = ({ contacts }) => {
                 <h1>Victor Greiveldinger</h1>
             </div>
             <div className="contact-logo">
-                    {contactsJSX}
+                <a>Ancre pour contact</a>
             </div>
         </div>
     );
