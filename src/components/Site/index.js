@@ -1,5 +1,10 @@
 // == Import npm
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import {
+  Link,
+  Switch,
+  Route,
+} from 'react-router-dom';
 
 // == Components Imports
 import HeaderLeft from 'src/components/HeaderLeft';
@@ -15,18 +20,25 @@ import './styles.scss';
 
 
 const Site = () => {
-  // Pour le chargement asynchrone des résultats 
-  const [loading, setLoading] = useState(false);
 
+  const [value, setValue] = useState(false);
+
+  const handleChange = (evt) => {
+    setValue(evt.target.value);
+  }
+  const cleanData = personnalData.map(data => {
+    return {
+      author: data.author,
+      birthday: data.birthday,
+      description: data.description,
+    };
+  });
+  
   return (
     <div className="app">
-      <HeaderLeft />
-      <Header />
-      {/* <Profil 
-        picture={personnalData.author}
-        birthday={personnalData.birthday}
-        description={personnalData.description}
-      /> */}
+      {/* <HeaderLeft /> */}
+      <Header value={value} handleChange={handleChange}/>
+      <Profil data={cleanData}/>
       <Description />
       {/* <Progression /> */}
     </div>

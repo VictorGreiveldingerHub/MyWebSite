@@ -1,19 +1,6 @@
-html, body {
-  font-family: Helvetica Neue,Arial,Helvetica,sans-serif;
-  background-color:#F2F7F7;
-  color:  #858585;
-  width: 100%;
-
-  & #root {
-    height: 100%;
-  }
-}
-
 .app {
-  width: 100%;
-  height: 100%;
-  margin: auto;
-  text-align: center;
+  display: flex; 
+  flex-wrap: wrap;
 }
 
 
@@ -21,61 +8,71 @@ html, body {
 .header-horizontal {
   display: flex;
   border-bottom:  1px solid rgba(34,36,38,.15);
-  height: 5em;
-  justify-content: space-around;
-  margin-left: -3em;
+  background: #F2F7F7 ;
+  width: -webkit-fill-available;
 
-  & .my-logo {
-    
+  & .my-logo img {
+    max-width: 3em;
+    margin-right:2em;
+  }
+
+  & #centered-elements {
+    display: inline-flex;
+    flex: auto;
+    align-items: center;
+    justify-content:center;
   }
 
   & .menu-button {
     display: flex;
-    height: 100%;
-    border-right:  1px solid rgba(34,36,38,.15);
-    padding: 1em 1em 0 0;
-    margin-left: -2em;
+    align-items: center;
   }
 
-  & .menu-bar {
+  & .menu-bar .menu {
     display: flex;
     align-items: center;
   }
 
-  & .menu {
-    display: flex;
-    align-items: center;
-  }
-  
   & .contact-logo {
+    display: flex;
+    align-items: center;
+  }
+
+  & img.ui.image {
+    min-width: fit-content;
+  }
+
+  & .logo {
+    margin: 1em;
   }
 
   & #logo-list {
     display: flex;
-    width: 100%;
   }
-}
-// Pour la gestion de mon profil 
-.ui.card {
-}
-
-.ui.progress:last-child {
-  margin: 0px 27em 1.5em;
 }
 
 // Description du site
 .description {
-background-color: violet;
-height: 100%;
+  background-color: violet;
+  width: 100%;
+
   // Pour la gestion du logo react dynamique au passage de la souris 
   & #react-logo {
     max-width: 8em;
+    margin: 2% 45%;
     transition-duration:2s;
     transition-timing-function:ease;
   }
   
   & img:hover#react-logo {
     transform:rotate(360deg);
+  }
+
+  & .ui-inverted-segment {
+    height:100%;
+  }
+  & #javascript-section {
+    background: #F2F7F7;
   }
 } 
 
@@ -84,3 +81,19 @@ height: 100%;
   color: #858585;
 }
 
+// Profil / CV 
+
+.ui[class*="very relaxed"].grid {
+  margin-left: -2.5rem;
+  margin-right: -2.5rem;
+  margin-bottom: inherit;
+}
+
+#cv-segment {
+  width: -webkit-fill-available;
+}
+
+#bar-progression {
+  width: auto;
+  margin-bottom: auto;
+}

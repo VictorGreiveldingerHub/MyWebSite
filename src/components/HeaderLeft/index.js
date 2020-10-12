@@ -1,22 +1,21 @@
 import React from 'react'
+import PropTypes from 'prop-types';
 import { Menu, Sidebar, Checkbox } from 'semantic-ui-react'
-// import Logo from 'src/assets/Images/MyLogo.png';
 
-const HeaderLeft = ({ animation, direction, visible }) => {
+const HeaderLeft = () => {
     return (
         <Sidebar
           as={Menu}
-          animation={animation}
-          direction={direction}
+          animation="overlay"
+          direction="left"
           icon='labeled'
           inverted
           vertical
-          visible={visible}
-          width=''
+          visible= "false"
         >
-          <Menu.Item as='a'>
+          {/* <Menu.Item as='a'>
             Language
-          </Menu.Item>
+          </Menu.Item> */}
           <Menu.Item as='a'>
             Accueil
           </Menu.Item>
@@ -26,12 +25,16 @@ const HeaderLeft = ({ animation, direction, visible }) => {
           <Menu.Item as='a'>
             Travaux
           </Menu.Item>
-          <Menu.Item as='a'>
-            {/* <Checkbox toggle /> */}
+          {/* <Menu.Item as='a'>
+            <Checkbox toggle />
             Theme Light / Dark
-          </Menu.Item>
+          </Menu.Item> */}
         </Sidebar>
     )
 };
+
+
+HeaderLeft.propTypes = {
+}
 
 export default HeaderLeft;

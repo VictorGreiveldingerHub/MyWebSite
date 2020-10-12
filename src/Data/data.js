@@ -1,4 +1,5 @@
-export default {
+export default [
+  {
   title:'Curriculum vitae',
   author:'Victor Greiveldinger',
   description:'Développeur Fullstack Javascript / React',
@@ -31,4 +32,4 @@ export default {
   ],
 
 }
-
+];
