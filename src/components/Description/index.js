@@ -2,6 +2,8 @@ import React from 'react';
 import { Divider, Segment, Grid, Image } from 'semantic-ui-react';
 import reactLogo from 'src/assets/Images/react-logo.svg';
 
+import Todo from 'src/components/Todo';
+
 
 const Description = () => {
     return (
@@ -16,7 +18,7 @@ const Description = () => {
                     Ce site a pour but de montrer mon Curriculum Vitae ainsi que quelques exemples de travaux que j'ai déjà réalisés en tant que
                     développeur Fullstack Javascript Junior Web et Web Mobile.
                 </p>
-                <span></span>
+                <span>En vous souhaitant une très bonne visite</span>
                 <br/>
             <Divider inverted />
             <Segment>
@@ -28,7 +30,11 @@ const Description = () => {
                     <p> Une page pour montrer quelques travaux </p>
                 </Grid.Column>
                 <Grid.Column>
-                    <p> Une page pour me contacter. A venir </p>
+                    <div>
+                        <h5>A venir sur le site :</h5>
+                        <Todo />
+                    </div>
+
                 </Grid.Column>
                 </Grid>
                 </Segment>
