@@ -1,29 +1,29 @@
 import React from 'react';
+import { Checkbox } from 'semantic-ui-react';
 // import PropTypes from 'prop-types';
 
-const List = () => {
+import './styles.scss';
+
+const List = ({tasks, handleCheckboxChange}) => {
+
+    const tasksJSX = tasks.map((task) => {
+        let taskClassNames = 'todo';
+        if (task.done) taskClassNames += ' todo--done';
+        return (
+          <li key={task.text} className={taskClassNames}>
+            <Checkbox
+              className="todo-check"
+              type="checkbox"
+              onChange={() => { handleCheckboxChange(task.id); }}
+              checked={task.done}
+            />
+            <span className="todo-text">{task.text}</span>
+          </li>
+        );
+      });
     return (
         <ul id="todo-list">
-            <li className="todo">
-            <input className="todo-check" type="checkbox" />
-            <span className="todo-text">Mettre un thème light / dark</span>
-            </li>
-            <li className="todo">
-            <input className="todo-check" type="checkbox" />
-            <span className="todo-text">Créer un menu en sidebar avec animation</span>
-            </li>
-            <li className="todo">
-            <input className="todo-check" type="checkbox" />
-            <span className="todo-text">Implémenter une app React avec GitHub API</span>
-            </li>
-            <li className="todo">
-            <input className="todo-check" type="checkbox" />
-            <span className="todo-text">Chercher un travail au Luxembourg</span>
-            </li>
-            <li className="todo">
-            <input className="todo-check" type="checkbox" />
-            <span className="todo-text">Site intégralement consultable sur mobile</span>
-            </li>
+            {tasksJSX}
         </ul>
     );
 };

@@ -24,9 +24,21 @@
     justify-content:center;
   }
 
-  & .menu-button {
+  & #menu-button {
     display: flex;
     align-items: center;
+    border-right: solid 1px rgba(34,36,38,.15);
+    padding: 1em;
+
+    & a {
+      margin-left:1em;
+      color:rgb(0, 0, 0);
+    }
+
+    & a:hover {
+      color: rgb(105,105,105);
+      text-decoration: underline;
+    }
   }
 
   & .menu-bar .menu {
@@ -89,6 +101,11 @@
   margin-bottom: inherit;
 }
 
+.ui.card:last-child {
+  margin-bottom: 0;
+  width: 40%;
+}
+
 .ui.segment:first-child {
   margin-top: 1em;
 }
@@ -106,6 +123,11 @@
 #bar-progression {
   width: auto;
   margin-bottom: auto;
+}
+
+.ui.list {
+  font-size: 1em;
+  text-align: left;
 }
 
 @media only screen and (min-width: 1200px){

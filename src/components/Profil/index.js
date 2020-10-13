@@ -1,5 +1,6 @@
 import React from 'react';
-import { Progress, Card, Divider, Grid, Image, Segment } from 'semantic-ui-react';
+import { Progress, Card, Divider, Grid, Image, Segment, List } from 'semantic-ui-react';
+import reactLogo from 'src/assets/Images/react-logo.svg';
 import Picture from 'src/assets/Images/profil.png';
 
 
@@ -26,37 +27,93 @@ const Profil = () => {
               </Card.Description>
             </Card.Content>
               <Progress
-                percent={53}
+                percent={60}
                 active
                 color="orange"
                 id="bar-progression"
-              >
-                  Devenir un très bon Développeur Fullstack Javascript / React 
+              > Devenir un bon Développeur Fullstack Javascript / React.
               </Progress>
           </Card>
         </Grid.Column>
         <Grid.Column>
-          <div className="lang">
-            <h2>Languages :</h2>
-            <ul>
-              <li>HTML</li>
-              <li>CSS</li>
-              <li>Javascript</li>
-              <li>React</li>
-            </ul>
+        <Segment>
+          <div className="environnement">
+            <h2>Environnement de travail</h2>
+              <h3>Langages / technologies associés</h3>
+            <List
+              divided
+              verticalAlign='left'
+            >
+              <List.Item>
+                <List.Content>
+                  <List.Header>HTML5 - CSS3 - SCSS</List.Header>
+                </List.Content>
+              </List.Item>
+              <List.Item>
+                <List.Content>
+                  <List.Header>Javascript</List.Header>
+                </List.Content>
+              </List.Item>
+              <List.Item>
+                <List.Content>
+                  <List.Header>REACT - REDUX - AXIOS - REACT ROUTER</List.Header>
+                </List.Content>
+              </List.Item>
+              <List.Item>
+                <List.Content>
+                  <List.Header>Webpack - Babel</List.Header>
+                </List.Content>
+              </List.Item>
+              <List.Item>
+                <List.Content>
+                  <List.Header>Semantic-ui / Semantic-ui-react / Bulma-react</List.Header>
+                </List.Content>
+              </List.Item>
+              <List.Item>
+                <List.Content>
+                  <List.Header>Postgres</List.Header>
+                </List.Content>
+              </List.Item>
+              <List.Item>
+                <List.Content>
+                  <List.Header>NodeJS / Express</List.Header>
+                </List.Content>
+              </List.Item>
+            </List>
+            <Divider section />
+            <h3>OUTILS UTILISES :</h3>
+            <List
+              divided
+              verticalAlign='left'
+            >
+              <List.Item>
+                <List.Content>
+                  <List.Header>Github - Git</List.Header>
+                </List.Content>
+              </List.Item>
+              <List.Item>
+                <List.Content>
+                  <List.Header>Discord</List.Header>
+                </List.Content>
+              </List.Item>
+              <List.Item>
+                <List.Content>
+                  <List.Header>Vscode</List.Header>
+                </List.Content>
+              </List.Item>
+              <List.Item>
+                <List.Content>
+                  <List.Header>Slack</List.Header>
+                </List.Content>
+              </List.Item>
+              <List.Item>
+                <List.Content>
+                  <List.Header>Environnement Linux - Mac</List.Header>
+                </List.Content>
+              </List.Item>
+            </List>
           </div>
-          <div>
-            <h2>Compétences :</h2>
-            <h3>A l'aise avec :</h3>
-            <ul>
-              <li>Github</li>
-              <li>Git</li>
-              <li>Discord</li>
-              <li>Vscode</li>
-              <li>Environnement Linux</li>
-              <li>Environnement Mac</li>
-            </ul>
-          </div>
+          </Segment>
         </Grid.Column>
       </Grid>
       <Divider vertical></Divider>
