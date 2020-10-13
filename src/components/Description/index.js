@@ -2,7 +2,7 @@ import React from 'react';
 import { Divider, Segment, Grid, Image } from 'semantic-ui-react';
 import reactLogo from 'src/assets/Images/react-logo.svg';
 
-import Todo from 'src/components/Todo';
+import TodoList from 'src/components/Todo/TodoList';
 
 
 const Description = () => {
@@ -32,7 +32,7 @@ const Description = () => {
                 <Grid.Column>
                     <div>
                         <h5>A venir sur le site :</h5>
-                        <Todo />
+                        <TodoList />
                     </div>
 
                 </Grid.Column>
