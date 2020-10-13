@@ -1,33 +1,20 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { Image } from 'semantic-ui-react';
-import { Spin as Hamburger } from 'hamburger-react';
-import HeaderLeft from 'src/components/HeaderLeft';
+import { Link } from 'react-router-dom';
 
 import GithubBlack from 'src/assets/Images/iconmonstr-github-4.svg';
 import EmailBlack from 'src/assets/Images/iconmonstr-email-1.svg';
 import LinkedinBlack from 'src/assets/Images/iconmonstr-linkedin-4.svg';
-import PhoneBlack from 'src/assets/Images/iconmonstr-phone-1.svg';
 import MyLogo from 'src/assets/Images/Final.svg';
 
 
-const Header = ({handleChange, value}) => {
-    console.log(value);
+const Header = () => {
     return (
         <div className="header-horizontal">
-            <div className="menu-button">
-                <div className="menu-bar">
-                    <Hamburger
-                        rounded
-                        label="MENU"
-                        size="16"
-                        handleChange={handleChange}
-                        value={value}
-                    />
-                </div>
-                <div className="menu">
-                    <span role='button'>MENU</span>                  
-                </div>
+            <div id="menu-button">
+                    <Link to="/">Acceuil</Link>
+                    <Link to="/profil">Profil / CV</Link>
+                    <Link to="/travaux">Travaux</Link>
             </div>
             <div id="centered-elements">
                 <div className="my-logo">
@@ -43,7 +30,10 @@ const Header = ({handleChange, value}) => {
             <div className="contact-logo">
                 <ul id="logo-list">
                     <li className="logo">
-                        <a href="https://github.com/VictorGreiveldingerHub">
+                        <a 
+                            href="https://github.com/VictorGreiveldingerHub"
+                            target="_blank"
+                        >
                             <Image
                                 alt="Logo Github Dark"
                                 src={GithubBlack}
@@ -59,18 +49,13 @@ const Header = ({handleChange, value}) => {
                         </a>
                     </li>
                     <li className="logo">
-                        <a href='https://www.linkedin.com/in/victor-greiveldinger-0b21471a7/'>
+                        <a
+                            href='https://www.linkedin.com/in/victor-greiveldinger-0b21471a7/'
+                            target="_blank"
+                        >
                             <Image
                                 alt="Logo Linkedin Dark"
                                 src={LinkedinBlack}
-                            />
-                        </a>
-                    </li>
-                    <li className="logo">
-                        <a href="blank">
-                            <Image
-                                alt="Logo Phone Dark"
-                                src={PhoneBlack}
                             />
                         </a>
                     </li>
@@ -79,10 +64,5 @@ const Header = ({handleChange, value}) => {
         </div>
     );
 };
-
-Header.propTypes = {
-    handleChange: PropTypes.func.isRequired,
-    value: PropTypes.bool.isRequired,
-}
 
 export default Header;

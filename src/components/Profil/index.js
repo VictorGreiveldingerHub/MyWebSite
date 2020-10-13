@@ -1,25 +1,38 @@
 import React from 'react';
-import { Card, Divider, Grid, Image, Segment } from 'semantic-ui-react';
+import { Progress, Card, Divider, Grid, Image, Segment } from 'semantic-ui-react';
 import Picture from 'src/assets/Images/profil.png';
-import Progression from 'src/components/Progression';
 
 
-const Profil = ( {data} ) => {
-console.log(data.description);
+const Profil = () => {
   return (
     <Segment id="cv-segment">
       <Grid columns={2} relaxed='very'>
         <Grid.Column>
           <Card className="profil">
-              <Image src={Picture} wrapped ui={false} />
-              <Card.Content>
-              <Card.Header>{data.author}</Card.Header>
+            <Image 
+              src={Picture}
+              wrapped 
+              ui={false}
+              size='small'
+              rounded
+            />
+            <Card.Content>
+              <Card.Header>Victor Greiveldinger</Card.Header>
               <Card.Meta>
-                  <span className='date'>{data.birthday}</span>
+                  <span className='date'>Né le : 22/11/1995</span>
               </Card.Meta>
-              <Card.Description>{data.description}</Card.Description>
-              </Card.Content>
-              <Progression/>
+              <Card.Description>
+                <h3>Développeur Fullstack Javascript / React Junior</h3>
+              </Card.Description>
+            </Card.Content>
+              <Progress
+                percent={53}
+                active
+                color="orange"
+                id="bar-progression"
+              >
+                  Devenir un très bon Développeur Fullstack Javascript / React 
+              </Progress>
           </Card>
         </Grid.Column>
         <Grid.Column>
@@ -45,10 +58,8 @@ console.log(data.description);
             </ul>
           </div>
         </Grid.Column>
-    </Grid>
-
-    <Divider vertical>==</Divider>
-
+      </Grid>
+      <Divider vertical></Divider>
     </Segment>
   );
 };

@@ -1,40 +1,18 @@
 import React from 'react'
-import PropTypes from 'prop-types';
-import { Menu, Sidebar, Checkbox } from 'semantic-ui-react'
+import { Link } from 'react-router-dom';
+import { slide as Menu } from "react-burger-menu";
 
 const HeaderLeft = () => {
-    return (
-        <Sidebar
-          as={Menu}
-          animation="overlay"
-          direction="left"
-          icon='labeled'
-          inverted
-          vertical
-          visible= "false"
-        >
-          {/* <Menu.Item as='a'>
-            Language
-          </Menu.Item> */}
-          <Menu.Item as='a'>
-            Accueil
-          </Menu.Item>
-          <Menu.Item as='a'>
-            Curriculum Vitae
-          </Menu.Item>
-          <Menu.Item as='a'>
-            Travaux
-          </Menu.Item>
-          {/* <Menu.Item as='a'>
-            <Checkbox toggle />
-            Theme Light / Dark
-          </Menu.Item> */}
-        </Sidebar>
-    )
+  return (
+    <Menu>
+      {/* <Menu.Item as='a'>
+        Language
+      </Menu.Item> */}
+      <Link to="/">Acceuil</Link>
+      <Link to="/profil">Profil / CV</Link>
+      <Link to="/travaux">Travaux</Link>
+      </Menu>
+    );
 };
-
-
-HeaderLeft.propTypes = {
-}
 
 export default HeaderLeft;

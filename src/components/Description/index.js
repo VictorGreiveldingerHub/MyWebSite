@@ -7,15 +7,17 @@ const Description = () => {
     return (
         <div className="description">
             <Segment inverted>
-            <div>
-                <span>Survole moi</span>
-            </div>
                 <Image
                     src={reactLogo}
                     id="react-logo"
                     alt="logo-react"/>
-                <p> Bonjour à tous, voici mon Porte Folio / Curriculum Vitae / Développeur Fullstack Javascript Junior </p> <br/>
-                <p> Programmer avec à React ... </p>
+                <p> 
+                    Bonjour à tous, récemment sorti d'une formation de 5 mois chez O'clock j'avais à coeur de mettre en production mon propre site web et web mobile.
+                    Ce site a pour but de montrer mon Curriculum Vitae ainsi que quelques exemples de travaux que j'ai déjà réalisés en tant que
+                    développeur Fullstack Javascript Junior Web et Web Mobile.
+                </p>
+                <span></span>
+                <br/>
             <Divider inverted />
             <Segment>
                 <Grid columns={3} relaxed='very'>

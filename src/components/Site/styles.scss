@@ -1,6 +1,7 @@
 .app {
   display: flex; 
   flex-wrap: wrap;
+  width: 100%;
 }
 
 
@@ -53,7 +54,6 @@
 
 // Description du site
 .description {
-  background-color: violet;
   width: 100%;
 
   // Pour la gestion du logo react dynamique au passage de la souris 
@@ -89,11 +89,29 @@
   margin-bottom: inherit;
 }
 
+.ui.segment:first-child {
+  margin-top: 1em;
+}
+
 #cv-segment {
   width: -webkit-fill-available;
+}
+
+.ui.grid>[class*="very relaxed"].row>.column, .ui[class*="very relaxed"].grid>.column:not(.row), .ui[class*="very relaxed"].grid>.row>.column {
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+  padding-bottom: 3em;
 }
 
 #bar-progression {
   width: auto;
   margin-bottom: auto;
+}
+
+@media only screen and (min-width: 1200px){
+  .ui.container {
+      width: auto;
+      margin-left: auto!important;
+      margin-right: auto!important;
+  }
 }
