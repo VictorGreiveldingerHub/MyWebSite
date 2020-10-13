@@ -40,14 +40,14 @@ const Header = () => {
                             />
                         </a>
                     </li>
-                    <li className="logo">
+                    {/* <li className="logo">
                         <a href="blank">
                             <Image
                                 alt="Logo Email Dark"
                                 src={EmailBlack}
                             />
                         </a>
-                    </li>
+                    </li> */}
                     <li className="logo">
                         <a
                             href='https://www.linkedin.com/in/victor-greiveldinger-0b21471a7/'

@@ -1,12 +1,14 @@
 import React from 'react';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
-const Counter = () => {
+const Counter = ({label}) => {
     return (
-        <div id="todo-counter">3 tâches en cours</div>
+        <div id="todo-counter">{label}</div>
     );
 };
 
-Counter.propTypes = {};
+Counter.propTypes = {
+    label: PropTypes.string.isRequired,
+};
 
 export default Counter;
