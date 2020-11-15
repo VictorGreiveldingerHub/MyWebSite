@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Header, Container, Image, Menu } from 'semantic-ui-react';
+import { Header, Segment, Image, Menu } from 'semantic-ui-react';
 
 import Logo from 'src/assets/Images/Final.svg';
 
 const C = ( {handleItemClick, activeItem} ) => {
     return (
-        <Container className="header">
+        <Segment className="header">
             <Menu pointing secondary>
                 <Menu.Item
                     name='accueil'
@@ -48,7 +48,7 @@ const C = ( {handleItemClick, activeItem} ) => {
                     marginTop: '1em',
                   }}
             />
-        </Container>
+        </Segment>
     );
 };
 
