@@ -6,6 +6,7 @@ import './styles.scss';
 
 // == Components Imports
 import Header from 'src/components/Header';
+import MainContent from 'src/components/MainContent';
 import Footer from 'src/components/Footer';
 
 const Site = () => {
@@ -22,6 +23,7 @@ const Site = () => {
         activeItem={activeItem}
         handleItemClick={handleItemClick}
       />
+      <MainContent />
       <Footer />
     </div>
   );

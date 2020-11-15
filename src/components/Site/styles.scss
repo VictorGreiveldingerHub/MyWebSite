@@ -3,3 +3,9 @@
         text-align: left;
     }
 };
+
+.ui.tiny.image, .ui.tiny.images .image, .ui.tiny.images img, .ui.tiny.images svg {
+    width: 60px;
+    height: auto;
+    font-size: .85714286rem;
+}
