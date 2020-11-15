@@ -1,29 +1,28 @@
 // == Import npm
-import React, { useState, useEffect } from 'react';
-import { Route, Switch } from 'react-router-dom';
-import { Container } from 'semantic-ui-react';
+import React, {useState} from 'react';
+
+// == Import
+import './styles.scss';
 
 // == Components Imports
 import Header from 'src/components/Header';
-import Description from 'src/components/Description';
-import Profil from 'src/components/Profil';
-
-// == Import
-import 'semantic-ui-css/semantic.min.css'
-import './styles.scss';
-
+import Footer from 'src/components/Footer';
 
 const Site = () => {
+  // State pour gérer le menu
+  const [activeItem, setActiveItem] = useState('accueil');
+
+  const handleItemClick = (evt, { name }) => {
+    setActiveItem(name);
+  };
+
   return (
     <div className="app">
-      <Header />
-      <Container>
-        <Switch>
-          <Route exact path="/"><Description /></Route>
-          <Route exact path ="/profil" ><Profil /></Route>
-          <Route exact path="/travaux"></Route>
-        </Switch>
-      </Container>
+      <Header
+        activeItem={activeItem}
+        handleItemClick={handleItemClick}
+      />
+      <Footer />
     </div>
   );
 };

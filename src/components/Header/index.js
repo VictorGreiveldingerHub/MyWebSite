@@ -1,68 +1,60 @@
 import React from 'react';
-import { Image } from 'semantic-ui-react';
-import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
+import { Header, Container, Image, Menu } from 'semantic-ui-react';
 
-import GithubBlack from 'src/assets/Images/iconmonstr-github-4.svg';
-import EmailBlack from 'src/assets/Images/iconmonstr-email-1.svg';
-import LinkedinBlack from 'src/assets/Images/iconmonstr-linkedin-4.svg';
-import MyLogo from 'src/assets/Images/Final.svg';
+import Logo from 'src/assets/Images/Final.svg';
 
-
-const Header = () => {
+const C = ( {handleItemClick, activeItem} ) => {
     return (
-        <div className="header-horizontal">
-            <div id="menu-button">
-                    <Link to="/">Acceuil</Link>
-                    <Link to="/profil">Profil / CV</Link>
-                    <Link to="/travaux">Travaux</Link>
-            </div>
-            <div id="centered-elements">
-                <div className="my-logo">
-                    <img 
-                        src={MyLogo}
-                        alt="my-logo"
-                    />
-                </div>
-                <div className="title">
-                    <h1>Victor Greiveldinger</h1>
-                </div>
-            </div>
-            <div className="contact-logo">
-                <ul id="logo-list">
-                    <li className="logo">
-                        <a 
-                            href="https://github.com/VictorGreiveldingerHub"
-                            target="_blank"
-                        >
-                            <Image
-                                alt="Logo Github Dark"
-                                src={GithubBlack}
-                            />
-                        </a>
-                    </li>
-                    {/* <li className="logo">
-                        <a href="blank">
-                            <Image
-                                alt="Logo Email Dark"
-                                src={EmailBlack}
-                            />
-                        </a>
-                    </li> */}
-                    <li className="logo">
-                        <a
-                            href='https://www.linkedin.com/in/victor-greiveldinger-0b21471a7/'
-                            target="_blank"
-                        >
-                            <Image
-                                alt="Logo Linkedin Dark"
-                                src={LinkedinBlack}
-                            />
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
+        <Container className="header">
+            <Menu pointing secondary>
+                <Menu.Item
+                    name='accueil'
+                    active={activeItem === 'accueil'}
+                    onClick={handleItemClick}
+                />
+                <Menu.Item
+                    name='profil'
+                    active={activeItem === 'profil'}
+                    onClick={handleItemClick}
+                />
+                <Menu.Item
+                    name='réalisations'
+                    active={activeItem === 'réalisations'}
+                    onClick={handleItemClick}
+                />
+                <Image src={Logo} size='tiny' centered/>
+            </Menu>
+            <Header
+                className="header-name"
+                as='h1'
+                content='Victor Greiveldinger'
+                textAlign='center'
+                style={{
+                    fontSize: '3em',
+                    fontWeight: 'normal',
+                    marginBottom: 0,
+                    marginTop: '2em',
+                  }}
+            />
+            <Header
+                className="header-work"
+                as='h2'
+                content='Développeur Web & Web Mobile Junior'
+                textAlign='center'
+                style={{
+                    fontSize: '1.7em',
+                    fontWeight: 'normal',
+                    marginTop: '1em',
+                  }}
+            />
+        </Container>
     );
 };
 
-export default Header;
+C.propTypes = {
+    handleItemClick: PropTypes.func.isRequired,
+    activeItem: PropTypes.bool.isRequired,
+};
+
+export default C;
