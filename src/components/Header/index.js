@@ -2,29 +2,38 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Header, Segment, Image, Menu } from 'semantic-ui-react';
 
+// Test 
+import { Link } from 'react-router-dom';
+
 import Logo from 'src/assets/Images/Final.svg';
 
 const C = ( {handleItemClick, activeItem} ) => {
     return (
         <Segment className="header">
-            <Menu pointing secondary>
-                <Menu.Item
-                    name='accueil'
-                    active={activeItem === 'accueil'}
-                    onClick={handleItemClick}
-                />
-                <Menu.Item
-                    name='profil'
-                    active={activeItem === 'profil'}
-                    onClick={handleItemClick}
-                />
-                <Menu.Item
-                    name='réalisations'
-                    active={activeItem === 'réalisations'}
-                    onClick={handleItemClick}
-                />
-                <Image src={Logo} size='tiny' centered/>
+            <Menu className="menu-fixe" pointing secondary stackable>
+                <Link to="/">
+                    <Menu.Item
+                        name='accueil'
+                        active={activeItem === 'accueil'}
+                        onClick={handleItemClick}
+                    />
+                </Link>
+                <Link to="profil">
+                    <Menu.Item
+                        name='profil'
+                        active={activeItem === 'profil'}
+                        onClick={handleItemClick}
+                    />
+                </Link>
+                <Link to="realisations">
+                    <Menu.Item
+                        name='réalisations'
+                        active={activeItem === 'réalisations'}
+                        onClick={handleItemClick}
+                    />
+                </Link>
             </Menu>
+            <Image src={Logo} size='tiny'/>
             <Header
                 className="header-name"
                 as='h1'

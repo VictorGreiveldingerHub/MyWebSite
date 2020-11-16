@@ -13,6 +13,7 @@ const Site = () => {
   // State pour gérer le menu
   const [activeItem, setActiveItem] = useState('accueil');
 
+  // Au click sur un des items du menu on recup son 'nom' pour changer activeItem
   const handleItemClick = (evt, { name }) => {
     setActiveItem(name);
   };
