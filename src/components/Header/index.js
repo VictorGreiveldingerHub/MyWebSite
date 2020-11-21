@@ -1,18 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Header, Segment, Image, Menu } from 'semantic-ui-react';
+import { Container, Menu } from 'semantic-ui-react';
+import './styles.scss';
 
 // Test 
 import { Link } from 'react-router-dom';
 
-import Logo from 'src/assets/Images/Final.svg';
-
 const C = ( {handleItemClick, activeItem} ) => {
     return (
-        <Segment className="header">
-            <Menu className="menu-fixe" pointing secondary stackable>
+        <div>
+            <Container>
+            <Menu id="menu" pointing secondary stackable>
                 <Link to="/">
                     <Menu.Item
+                        id="menu-item"
                         name='accueil'
                         active={activeItem === 'accueil'}
                         onClick={handleItemClick}
@@ -20,6 +21,7 @@ const C = ( {handleItemClick, activeItem} ) => {
                 </Link>
                 <Link to="profil">
                     <Menu.Item
+                        id="menu-item"
                         name='profil'
                         active={activeItem === 'profil'}
                         onClick={handleItemClick}
@@ -27,37 +29,15 @@ const C = ( {handleItemClick, activeItem} ) => {
                 </Link>
                 <Link to="realisations">
                     <Menu.Item
+                        id="menu-item"
                         name='réalisations'
                         active={activeItem === 'réalisations'}
                         onClick={handleItemClick}
                     />
                 </Link>
             </Menu>
-            <Image src={Logo} size='tiny'/>
-            <Header
-                className="header-name"
-                as='h1'
-                content='Victor Greiveldinger'
-                textAlign='center'
-                style={{
-                    fontSize: '3em',
-                    fontWeight: 'normal',
-                    marginBottom: 0,
-                    marginTop: '2em',
-                  }}
-            />
-            <Header
-                className="header-work"
-                as='h2'
-                content='Développeur Web & Web Mobile Junior'
-                textAlign='center'
-                style={{
-                    fontSize: '1.7em',
-                    fontWeight: 'normal',
-                    marginTop: '1em',
-                  }}
-            />
-        </Segment>
+            </Container>
+            </div>
     );
 };
 
