@@ -1,0 +1,35 @@
+@media (max-width: 700px) {
+    #segment-list {
+        width: 80% !important;
+        margin: 5px auto !important;
+    };
+
+    #segment-competences {
+        margin: 5% 5% !important;
+    }
+};
+
+#segment-competences {
+    margin: 5% 25%;
+};
+
+#list-item {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+};
+
+#segment-list {
+    display: flex;
+    width: 48%;
+    margin: 14px 3px;
+    justify-content: space-between;
+};
+
+#segment-list:hover {
+    background-color: rgba(151, 148, 148, 0.61);
+};
+
+#rating-list:hover {
+    font-size: 1.2rem;
+};

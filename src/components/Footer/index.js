@@ -8,18 +8,18 @@ const C = () => {
     const year = now.getFullYear();
 
     return (
-        <Segment inverted vertical style={{ padding: '5em 0em' }}>
+        <Segment inverted vertical>
             <Container>
                 <Grid divided inverted stackable>
                     <Grid.Row>
-                    <Grid.Column width={7}>
+                    <Grid.Column width={5}>
                         <Header inverted as='h4' content='Contact' />
                         <List link inverted>
                             <List.Item icon='mail' content='victorgreiveldinger@gmail.com' />
                             <List.Item icon='marker' content='Metz, Luxembourg' />
                         </List>
                     </Grid.Column>
-                    <Grid.Column width={7}>
+                    <Grid.Column width={3}>
                         <Container textAlign='center'>
                             <p>Site réalisé par - Victor Greiveldinger - {year} ©</p>
                         </Container>

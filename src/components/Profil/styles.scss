@@ -1,0 +1,25 @@
+@media (max-width: 900px) {
+    #propos {
+        text-align: center !important;
+    };
+
+    #propos-second {
+        text-align: center !important;
+    }
+}
+
+#propos {
+    text-align: left;
+}
+
+#profil-image {
+    margin: auto;
+}
+
+#third-column {
+    margin-left: 2em;
+    
+    & #propos-second {
+        text-align: right;
+    }
+}
