@@ -19,6 +19,7 @@ import './styles.scss';
 import Profil from 'src/components/Profil';
 import Competences from 'src/components/Competences';
 import Experiences from 'src/components/Experiences';
+import Realisations from 'src/components/Realisations';
 import Footer from 'src/components/Footer';
 
 const Site = () => {
@@ -63,13 +64,7 @@ const Site = () => {
       <Profil />
       <Competences data={dataCompetences}/>    
       <Experiences />
-      <Segment style={{ padding: '8em 0em' }} vertical textAlign='center'>
-        <Container text>
-          <Header as='h3' style={{ fontSize: '2em' }}>
-            Projets - Réalisations
-          </Header>
-        </Container>
-      </Segment>
+      <Realisations />
       <Footer />
     </div>
   );
