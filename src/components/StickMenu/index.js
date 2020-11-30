@@ -1,24 +1,32 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React, { Component, createRef } from 'react'
 import {
-    Grid,
-    Rail,
-    Segment,
-    Image,
-    Sticky,
-    Header,
-    Menu,
-} from 'semantic-ui-react';
+  Grid,
+  Header,
+  Image,
+  Rail,
+  Ref,
+  Segment,
+  Sticky,
+  Menu,
+} from 'semantic-ui-react'
 
-const C = () => {
-    return(
-        <Grid centered columns={3}>
-            <Grid.Column>
-            <Segment>
-                <Rail position='left'>
-                    <Sticky>
+export default class StickyExampleOffset extends Component {
+  contextRef = createRef()
 
-                <Menu vertical>
+  render() {
+    return (
+      <Grid style={{height:'1000px'}} centered columns={3}>
+        <Grid.Column>
+          <Ref innerRef={this.contextRef}>
+            <Segment style={{height:'1000px'}}>
+              <Rail position='left'>
+                <Sticky
+                  bottomOffset={50}
+                  context={this.contextRef}
+                  offset={0}
+                  pushing
+                >
+                  <Menu vertical>
                     <Menu.Item
                     name='promotions'
                     >
@@ -46,14 +54,12 @@ const C = () => {
                     <Header as='h4'>Contact</Header>
                     </Menu.Item>
                 </Menu>
-                    </Sticky>
-                </Rail>
+                </Sticky>
+              </Rail>
             </Segment>
-            </Grid.Column>
-        </Grid>
-    );
-};
-
-C.propTypes = {};
-
-export default C;
+          </Ref>
+        </Grid.Column>
+      </Grid>
+    )
+  }
+}
