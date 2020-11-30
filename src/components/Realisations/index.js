@@ -1,11 +1,15 @@
 import React from 'react';
-import { Segment, Container, Header } from 'semantic-ui-react';
+import {
+    Segment,
+    Container,
+    Header
+} from 'semantic-ui-react';
 import PropTypes from 'prop-types';
 
 const C = () => {
     
     return (
-        <Segment id="realisation-segment" style={{ padding: '8em 0em', borderBottom:'none', margin:'0 300px'}} vertical textAlign='center'>
+        <Segment id="realisation-segment" style={{ borderBottom:'none', margin:'5% 25%'}} vertical textAlign='center'>
             <Container text>
                 <Header as='h3' style={{ fontSize: '2em' }}>
                     Projets - Réalisations

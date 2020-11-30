@@ -1,12 +1,9 @@
 // == Import npm
 import React from 'react';
 import {
-  Segment,
   Header,
-  Container,
   Icon,
   Image,
-  Rail,
 } from 'semantic-ui-react';
 // == Import
 

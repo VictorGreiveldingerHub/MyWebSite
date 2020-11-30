@@ -1,14 +1,20 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Container, Segment, Header, Loader, Item, Divider } from 'semantic-ui-react';
-import oclock from 'src/assets/Images/oclock.png';
+import {
+    Container,
+    Segment,
+    Header,
+    Loader,
+    Item,
+    Divider
+} from 'semantic-ui-react';
 import './styles.scss';
 
 
 
 const C = () => {
     return (
-        <Segment style={{ padding: '8em 0em' }} vertical textAlign='center'>
+        <Segment vertical textAlign='center'>
             <Container text>
                 <Header as='h3' style={{ fontSize: '2em' }}>
                     Expériences
@@ -47,7 +53,7 @@ const C = () => {
                     </Item>
                 </Item.Group>
                 <Divider section />
-                <Loader active size="big" inline='centered'>
+                <Loader active size="medium" inline='centered'>
                     Chargement des expériences
                 </Loader>
             </Container>

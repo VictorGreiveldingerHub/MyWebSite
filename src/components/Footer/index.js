@@ -1,8 +1,21 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Logo from 'src/assets/Images/LogoNoir.svg';
-import { Container, Segment, Divider, Icon, Header, List, Image, Grid, Button, Form } from 'semantic-ui-react';
+import {
+    Container,
+    Segment,
+    Divider,
+    Grid,
+    List,
+    Image,
+    Header,
+} from 'semantic-ui-react';
 import './styles.scss';
+
+// Import des logos nécessaire
+import Logo from 'src/assets/Images/LogoNoir.svg';
+import Github from 'src/assets/Images/github.png';
+import Linkedin from 'src/assets/Images/linkedin.png';
+import Facebook from 'src/assets/Images/facebook1.png';
 
 const C = () => {
     // Pour la gestion de la date en année 
@@ -11,16 +24,36 @@ const C = () => {
 
     return (
         <Segment vertical id="footer">
-            <Divider horizontal><img src={Logo}/></Divider>
-            <Container textAlign='center' >
-                <List horizontal>
-                    <List.Item>
-                        <Header>victorgreiveldinger@gmail.com</Header>
-                    </List.Item>
-                    <List.Item>
-                        <Icon name="github" size="medium" href="https://github.com/VictorGreiveldingerHub" target="no_blank"></Icon>
-                    </List.Item>
-                </List>
+            <Divider horizontal>
+                <img src={Logo}/>
+            </Divider>
+            <Grid columns={3} divided>
+                <Grid.Row stretched style={{marginBottom: '2em'}}>
+                    <Grid.Column />
+                    <Grid.Column>
+                        <List id="list" horizontal>
+                            <List.Item as='a' id="list-item">
+                                <a href='https://github.com/VictorGreiveldingerHub' target='no_blank'>
+                                    <Image id="list-logo" src={Github}/>
+                                </a>
+                            </List.Item>
+                            <List.Item as='a' id="list-item">
+                                <a href='https://www.linkedin.com/in/victor-greiveldinger-0b21471a7/' target='no_blank'>
+                                    <Image id="list-logo" src={Linkedin}/>
+                                </a>
+                            </List.Item>
+                            <List.Item as='a' id="list-item">
+                                <a href='https://www.facebook.com/victor.greiveldinger?ref=bookmarks' target='no_blank'>
+                                    <Image id="list-logo" src={Facebook}/>
+                                </a>
+                            </List.Item>
+                        </List>
+                    </Grid.Column>
+                    <Grid.Column />
+                </Grid.Row>
+            </Grid>
+            <Container id="last" textAlign="center">
+                <Header as='h3'>Site réalisé par - Victor Greiveldinger - {year} ©</Header> 
             </Container>
         </Segment>
     );
@@ -29,11 +62,3 @@ const C = () => {
 C.propTypes = {};
 
 export default C;
-            // <Header  as='h4' content='Contact' />
-            //     <List link >
-            //         <List.Item icon='mail' content='victorgreiveldinger@gmail.com' />
-            //         <List.Item icon='marker' content='Metz, Luxembourg' />
-            //     </List>
-            //     <Container textAlign='right'>
-            //         <p>Site réalisé par - Victor Greiveldinger - {year} ©</p>
-            //     </Container>

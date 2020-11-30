@@ -6,6 +6,11 @@
     #propos-second {
         text-align: center !important;
     }
+
+    .ui.column.grid>[class*="five wide"].column, .ui.grid>.column.row>[class*="five wide"].column, .ui.grid>.row>[class*="five wide"].column, .ui.grid>[class*="five wide"].column {
+        width: 100% !important;
+        padding: 1rem!important;
+    }
 }
 
 #propos {
