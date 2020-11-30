@@ -4,6 +4,7 @@ import {
   Header,
   Icon,
   Image,
+  Container,
 } from 'semantic-ui-react';
 // == Import
 
@@ -13,6 +14,7 @@ import dataCompetences from 'src/data/competences.js';
 import './styles.scss';
 
 // == Components Imports
+import StickMenu from 'src/components/StickMenu';
 import Profil from 'src/components/Profil';
 import Competences from 'src/components/Competences';
 import Experiences from 'src/components/Experiences';
@@ -35,29 +37,32 @@ const Site = () => {
     <div id="app">
       <div id="top" className="background-picture">
         <div style={sectionStyle}>
-          <Image
-            src={Logo}
-            size='tiny'
-            alt="Logo personnel"
-            id="logo"
-            centered
-          />
-          <Header
-            as='h1'
-            id="name-header"
-            content='Victor Greiveldinger'
-            textAlign='center'
-            inverted
-          />
-          <Header
-            as='h2'
-            content='Développeur Web & Web Mobile Junior'
-            textAlign='center'
-            inverted
-          />
+          <Container style={{padding: '12%'}}>
+            <Image
+              src={Logo}
+              size='tiny'
+              alt="Logo personnel"
+              id="logo"
+              centered
+            />
+            <Header
+              as='h1'
+              id="name-header"
+              content='Victor Greiveldinger'
+              textAlign='center'
+              inverted
+            />
+            <Header
+              as='h2'
+              content='Développeur Web & Web Mobile Junior'
+              textAlign='center'
+              inverted
+            />
             <Icon id="arrowdown" inverted color="white" name="angle double down" size="huge"/>
+          </Container>
         </div>
       </div>
+      <StickMenu />
       <Profil />
       <Competences data={dataCompetences}/>    
       <Experiences />

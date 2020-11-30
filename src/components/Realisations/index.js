@@ -12,7 +12,7 @@ const C = () => {
         <Segment id="realisation-segment" style={{ borderBottom:'none', margin:'5% 25%'}} vertical textAlign='center'>
             <Container text>
                 <Header as='h3' style={{ fontSize: '2em' }}>
-                    Projets - Réalisations
+                    Projets
                 </Header>
             </Container>
         </Segment>

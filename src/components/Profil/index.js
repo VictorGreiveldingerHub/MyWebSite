@@ -14,12 +14,15 @@ import {
 import Profil from 'src/assets/Images/profil.png';
 import Opquast from 'src/assets/Images/Opquast.png';
 import eLAO from 'src/assets/Images/eLAO.png';
+import Oclock from 'src/assets/Images/oclock.png';
 import './styles.scss';
 
 const C = () => {
     const [open, setOpen] = useState(false);
+    const [openElao, setOpenElao] = useState(false);
+    const [openOpquast, setOpenOpquast] = useState(false);
     return (
-        <Segment style={{ margin: '5% 25%' }} vertical textAlign='center'>
+        <Segment style={{ margin: '5% 25%'}} vertical textAlign='center'>
         <Header
           as='h3'
           content="Profil"
@@ -63,23 +66,66 @@ const C = () => {
                     <List.Item>
                         <List.Icon name='language' />
                         <List.Content>
-                            <Popup position='top center' content='Français : langue maternelle' trigger={<span>Français</span>} />
-                            <Popup position='top center' content='Anglais : niveau B2' trigger={<span>Anglais</span>} />
+                            <Popup position='top center' content='Français : langue maternelle' trigger={<span style={{margin: '5px', color:'rgb(64, 113, 247)'}}>Français -</span>} />
+                            <Popup position='top center' content='Anglais : niveau B2' trigger={<span style={{margin: '5px', color:'rgb(64, 113, 247)'}}>Anglais</span>} />
                         </List.Content>
                     </List.Item>
                 </List>
             </Grid.Column>
             <Grid.Column id="third-column" width={5}>
                 <Header as='h4'>
-                  En plus
+                  Diplômes & Formations
                 </Header>
-                <p id="propos-second">
-                  Suite à la fin de ma formation, j'ai eu l'occasion de passer mon certificat Opquast® 
+                <p id="propos-second">Issu d'une formation O'Clock</p>
                     <Modal
                         onClose={() => setOpen(false)}
                         onOpen={() => setOpen(true)}
                         open={open}
-                        trigger={<Button>Opquast ?</Button>}
+                        trigger={<Button id="buttonWhy">O'clock ?</Button>}
+                        >
+                        <Modal.Header>
+                            Titre professionnel Développeur Web et Web Mobile - Niveau 5 (bac+2)
+                        </Modal.Header>
+                        <Modal.Content image>
+                            <Image size='medium' src={Oclock} wrapped />
+                            <Modal.Description>
+                            <Header>
+                                O'clock - Formation en Téléprésentiel - Labelisée Grande Ecole du Numérique
+                            </Header>
+                            <p>De décembre 2019 à mai 2020</p>
+                            <p>700 heures intensives :</p>
+                            <p>
+                            3 mois de Socle : HTML / CSS / Javascript / NodeJS
+                            </p>
+                            <p>
+                            1 mois de spécialisation : React
+                            </p>
+                            <p>
+                            1 mois de projet de fin d'étude : Pair2Peer
+                            </p>
+                            </Modal.Description>
+                        </Modal.Content>
+                        <Modal.Actions>
+                            <Button color='black' onClick={() => setOpen(false)}>
+                            Quitter
+                            </Button>
+                            <Button
+                            labelPosition='right'
+                            icon='arrow right'
+                            onClick={() => setOpen(false)}
+                            >
+                            <a href='https://oclock.io/formations/developpeur-web-fullstack-javascript' target='no_blank'>En savoir plus sur O'Clock</a>
+                            </Button>
+                        </Modal.Actions>
+                    </Modal>
+                <p id="propos-second">
+                  Suite à la fin de ma formation, j'ai eu l'occasion de passer mon certificat Opquast®
+                </p> 
+                    <Modal
+                        onClose={() => setOpenOpquast(false)}
+                        onOpen={() => setOpenOpquast(true)}
+                        open={openOpquast}
+                        trigger={<Button id="buttonWhy">Opquast ?</Button>}
                         >
                         <Modal.Header>Opquast</Modal.Header>
                         <Modal.Content image>
@@ -96,24 +142,24 @@ const C = () => {
                             </Modal.Description>
                         </Modal.Content>
                         <Modal.Actions>
-                            <Button color='black' onClick={() => setOpen(false)}>
+                            <Button color='black' onClick={() => setOpenOpquast(false)}>
                             Quitter
                             </Button>
                             <Button
                             labelPosition='right'
                             icon='arrow right'
-                            onClick={() => setOpen(false)}
+                            onClick={() => setOpenOpquast(false)}
                             >
                             <a href='https://www.opquast.com/' target='no_blank'>En savoir plus sur Opquast</a>
                             </Button>
                         </Modal.Actions>
                     </Modal>
-                    Ainsi qu'un rapport d'évaluation eLAO en Anglais professionnel.
+                <p id="propos-second">Ainsi qu'un rapport d'évaluation eLAO en Anglais professionnel.</p>
                     <Modal
-                        onClose={() => setOpen(false)}
-                        onOpen={() => setOpen(true)}
-                        open={open}
-                        trigger={<Button>eLAO ?</Button>}
+                        onClose={() => setOpenElao(false)}
+                        onOpen={() => setOpenElao(true)}
+                        open={openElao}
+                        trigger={<Button id="buttonWhy">eLAO ?</Button>}
                         >
                         <Modal.Header>ELAO</Modal.Header>
                         <Modal.Content image>
@@ -128,19 +174,18 @@ const C = () => {
                             </Modal.Description>
                         </Modal.Content>
                         <Modal.Actions>
-                            <Button color='black' onClick={() => setOpen(false)}>
+                            <Button color='black' onClick={() => setOpenElao(false)}>
                             Quitter
                             </Button>
                             <Button
                             labelPosition='right'
                             icon='arrow right'
-                            onClick={() => setOpen(false)}
+                            onClick={() => setOpenElao(false)}
                             >
                             <a href='https://www.elao.co/' target='no_blank'>En savoir plus sur eLAO</a>
                             </Button>
                         </Modal.Actions>
                     </Modal>
-                </p>
             </Grid.Column>
           </Grid.Row>
         </Grid>

@@ -11,6 +11,10 @@
         width: 100% !important;
         padding: 1rem!important;
     }
+
+    #buttonWhy {
+        margin: 10px;
+    }
 }
 
 #propos {
@@ -27,4 +31,9 @@
     & #propos-second {
         text-align: right;
     }
+}
+
+#buttonWhy {
+    margin-bottom: 20px;
+    color: rgb(64, 113, 247);
 }

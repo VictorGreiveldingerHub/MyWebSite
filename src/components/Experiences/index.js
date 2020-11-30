@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 import {
     Container,
@@ -6,13 +6,16 @@ import {
     Header,
     Loader,
     Item,
-    Divider
+    Divider,
+    Modal,
+    Button,
 } from 'semantic-ui-react';
 import './styles.scss';
 
 
 
 const C = () => {
+    const [open, setOpen] = useState(false);
     return (
         <Segment vertical textAlign='center'>
             <Container text>
@@ -27,6 +30,24 @@ const C = () => {
                             <Item.Description>Projet de fin d'étude d'une durée de 1 mois</Item.Description>
                             <Item.Extra>
                                 <Header as='h3'>Pair2Peer</Header>
+                                    <Modal
+                                        onClose={() => setOpen(false)}
+                                        onOpen={() => setOpen(true)}
+                                        open={open}
+                                        trigger={<Button primary>Voir la vidéo de présentation</Button>}
+                                        >
+                                        <Modal.Header>
+                                            Pair2Peer
+                                        </Modal.Header>
+                                        <Modal.Content>
+                                        <iframe width="100%" height="415" src="https://www.youtube.com/embed/nRSm9SfLXbw?start=2281" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                        </Modal.Content>
+                                        <Modal.Actions>
+                                            <Button color='black' onClick={() => setOpen(false)}>
+                                            Quitter
+                                            </Button>
+                                        </Modal.Actions>
+                                    </Modal>
                                 <p>
                                     Cahier des charges (BDD, création d'une IU), methode Agile Scrum, 
                                 </p>
@@ -43,14 +64,19 @@ const C = () => {
                         </Item.Content>
                     </Item>
                         <Divider section />
-                    <Item>
-                        <Item.Content>
-                            <Item.Header>Agent de production</Item.Header>
-                            <Item.Meta>Imprimerie Centrale - Luxembourg</Item.Meta>
-                            <Item.Description></Item.Description>
-                            <Item.Extra>Job d'été</Item.Extra>
-                        </Item.Content>
-                    </Item>
+                            <Item>
+                                <Item.Content>
+                                    <Item.Header>Agent de production</Item.Header>
+                                    <Item.Meta>Imprimerie Centrale - Luxembourg</Item.Meta>
+                                    <Item.Description>
+                                        Mise en machine de feuille pour produire des magazines, journaux.
+                                        Nettoyage des locaux
+                                        Empaquettage divers.
+                                    </Item.Description>
+                                    <Item.Extra>Job d'été</Item.Extra>
+                                </Item.Content>
+                            </Item>
+                        
                 </Item.Group>
                 <Divider section />
                 <Loader active size="medium" inline='centered'>

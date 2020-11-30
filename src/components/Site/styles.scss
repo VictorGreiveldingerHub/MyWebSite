@@ -4,33 +4,6 @@ body {
 #app {
     font-family: 'Open Sans', sans-serif;
 }
-@media screen and (max-width: 450px) {
-    #name-container {
-        font-size: 18px;
-        left: 0 !important;
-
-        & #name-header {
-            font-size: 18px;
-            margin: 20px 0 10px;
-        }
-    };
-
-    
-};
-
-// DESKTOP 
-
-// Pour la section du nom prenom titre header
-#name-container {
-    position: absolute;
-    top: 10%;
-    z-index: 4;
-    left: 20px;
-
-    & #name-header {
-        color: rgb(243, 241, 241);
-    }
-};
 
 #arrowdown {
     position: absolute;

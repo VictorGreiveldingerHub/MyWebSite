@@ -32,17 +32,17 @@ const C = () => {
                     <Grid.Column />
                     <Grid.Column>
                         <List id="list" horizontal>
-                            <List.Item as='a' id="list-item">
+                            <List.Item id="list-item">
                                 <a href='https://github.com/VictorGreiveldingerHub' target='no_blank'>
                                     <Image id="list-logo" src={Github}/>
                                 </a>
                             </List.Item>
-                            <List.Item as='a' id="list-item">
+                            <List.Item id="list-item">
                                 <a href='https://www.linkedin.com/in/victor-greiveldinger-0b21471a7/' target='no_blank'>
                                     <Image id="list-logo" src={Linkedin}/>
                                 </a>
                             </List.Item>
-                            <List.Item as='a' id="list-item">
+                            <List.Item id="list-item">
                                 <a href='https://www.facebook.com/victor.greiveldinger?ref=bookmarks' target='no_blank'>
                                     <Image id="list-logo" src={Facebook}/>
                                 </a>
@@ -53,7 +53,7 @@ const C = () => {
                 </Grid.Row>
             </Grid>
             <Container id="last" textAlign="center">
-                <Header as='h3'>Site réalisé par - Victor Greiveldinger - {year} ©</Header> 
+                <Header as='h4'>Site réalisé par - Victor Greiveldinger - {year} ©</Header> 
             </Container>
         </Segment>
     );
