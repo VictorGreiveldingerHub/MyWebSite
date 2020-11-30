@@ -1,7 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {
+    Grid,
     Rail,
+    Segment,
+    Image,
     Sticky,
     Header,
     Menu,
@@ -9,34 +12,45 @@ import {
 
 const C = () => {
     return(
-        <Rail position='right'>
-                <Sticky
-                  bottomOffset={50}
-                  offset={50}
-                  pushing
-                >
-                    <Menu vertical>
-                        <Menu.Item
-                        name='promotions'
-                        >
-                        <Header as='h4'>Promotions</Header>
-                        <p>Check out our new promotions</p>
-                        </Menu.Item>
-                        <Menu.Item
-                        name='coupons'
-                        >
-                        <Header as='h4'>Coupons</Header>
-                        <p>Check out our collection of coupons</p>
-                        </Menu.Item>
-                        <Menu.Item
-                        name='rebates'
-                        >
-                        <Header as='h4'>Rebates</Header>
-                        <p>Visit our rebate forum for information on claiming rebates</p>
-                        </Menu.Item>
-                    </Menu>
-                </Sticky>
-              </Rail>
+        <Grid centered columns={3}>
+            <Grid.Column>
+            <Segment>
+                <Rail position='left'>
+                    <Sticky>
+
+                <Menu vertical>
+                    <Menu.Item
+                    name='promotions'
+                    >
+                    <Header as='h4'>Profil</Header>
+                    </Menu.Item>
+
+                    <Menu.Item
+                    name='coupons'
+                    >
+                    <Header as='h4'>Compétences</Header>
+                    </Menu.Item>
+                    <Menu.Item
+                    name='rebates'
+                    >
+                    <Header as='h4'>Expériences</Header>
+                    </Menu.Item>
+                    <Menu.Item
+                    name='rebates'
+                    >
+                    <Header as='h4'>Projets</Header>
+                    </Menu.Item>
+                    <Menu.Item
+                    name='rebates'
+                    >
+                    <Header as='h4'>Contact</Header>
+                    </Menu.Item>
+                </Menu>
+                    </Sticky>
+                </Rail>
+            </Segment>
+            </Grid.Column>
+        </Grid>
     );
 };
 
