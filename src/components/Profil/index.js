@@ -22,24 +22,20 @@ const C = () => {
     const [openElao, setOpenElao] = useState(false);
     const [openOpquast, setOpenOpquast] = useState(false);
     return (
-        <Segment style={{ margin: '5% 25%'}} vertical textAlign='center'>
+        <Segment id="profil-segment" vertical textAlign='center'>
         <Header
-          as='h3'
+          as='h2'
           content="Profil"
-          style={{
-            marginBottom: '1em',
-            fontSize: '2em',
-          }}
         />
         <Header
-            as='h4'
+            as='h3'
             content="Tout droit sorti d'une formation de 5 mois chez O'Clock, je suis aujourd'hui impatient de travailler"
-            style={{color: 'rgb(172, 169, 169)', fontWeight: '100', marginBottom: '2em', paddingBottom: '2em', borderBottom: '1px solid rgb(172, 169, 169)'}}
+            style={{color: 'rgb(172, 169, 169)', marginBottom: '2em', paddingBottom: '2em', borderBottom: '1px solid rgb(172, 169, 169)'}}
         />
         <Grid container stackable>
           <Grid.Row style={{justifyContent: 'center'}}>
               <Grid.Column width={5}>
-                <Header as='h4' content='A propos' />
+                <Header as='h3' content='A propos' />
                 <p id="propos">
                     Jeune développeur de 25 printemps, motivé à souhait pour apprendre des nouvelles technologies, j'aime entreprendre des choses qu'elles soient inscrites ou non dans mes compétences.
                 </p>
@@ -73,7 +69,7 @@ const C = () => {
                 </List>
             </Grid.Column>
             <Grid.Column id="third-column" width={5}>
-                <Header as='h4'>
+                <Header as='h3'>
                   Diplômes & Formations
                 </Header>
                 <p id="propos-second">Issu d'une formation O'Clock</p>

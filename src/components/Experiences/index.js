@@ -17,9 +17,9 @@ import './styles.scss';
 const C = () => {
     const [open, setOpen] = useState(false);
     return (
-        <Segment vertical textAlign='center'>
+        <Segment vertical textAlign='center' id="experience-segment">
             <Container text>
-                <Header as='h3' style={{ fontSize: '2em' }}>
+                <Header as='h2'>
                     Expériences
                 </Header>
                 <Item.Group>

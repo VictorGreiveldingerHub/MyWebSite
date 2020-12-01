@@ -2,7 +2,21 @@ body {
     width: 100%;
 }
 #app {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Open Sans', sans-serif !important;
+}
+
+@media (max-width: 600px) {
+    #main-segment {
+        margin: 0 2px !important;
+    }
+}
+
+#main-segment {
+    margin: 0 20%;
+};
+
+#sticky-segment {
+    margin-left: 70px;
 }
 
 #arrowdown {
@@ -15,3 +29,7 @@ body {
     height: 16%;
     padding-top: 27px;
 };
+
+.ui.text.container {
+    width: fit-content;
+}

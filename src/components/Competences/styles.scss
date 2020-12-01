@@ -9,14 +9,11 @@
     }
 };
 
-#segment-competences {
-    margin: 5% 25%;
-};
-
 #list-item {
     display: flex;
     width: 100%;
     flex-wrap: wrap;
+    justify-content: space-evenly;
 };
 
 #segment-list {

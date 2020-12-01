@@ -49,7 +49,7 @@ const C = ( {data} ) => {
     });
     return (
         <Segment id="segment-competences" vertical textAlign='center'>
-            <Header as='h3' style={{ fontSize: '2em' }}>
+            <Header as='h2'>
                 Compétences
             </Header>
             <List id="list-item">

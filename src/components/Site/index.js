@@ -1,10 +1,16 @@
 // == Import npm
-import React from 'react';
+import React, {createRef} from 'react';
 import {
   Header,
   Icon,
   Image,
   Container,
+  Segment,
+  Grid,
+  Ref,
+  Menu,
+  Rail,
+  Sticky,
 } from 'semantic-ui-react';
 // == Import
 
@@ -24,7 +30,7 @@ import Footer from 'src/components/Footer';
 const Site = () => {
   var sectionStyle = {
     width: "100%",
-    height: "666px",
+    height: "689px",
     marginBottom: "0",
     padding: "0",
     position: 'relative',
@@ -33,11 +39,13 @@ const Site = () => {
     backgroundImage: `url(${BackgroundPicture})`
   };
   
+  const contextRef = createRef();
+
   return (
     <div id="app">
       <div id="top" className="background-picture">
         <div style={sectionStyle}>
-          <Container style={{padding: '12%'}}>
+          <Container style={{padding: '13%'}}>
             <Image
               src={Logo}
               size='tiny'
@@ -62,12 +70,57 @@ const Site = () => {
           </Container>
         </div>
       </div>
-      <StickMenu />
-      <Profil />
-      <Competences data={dataCompetences}/>    
-      <Experiences />
-      <Realisations />
-      <Footer />
+      <Grid centered columns={1}>
+      <Grid.Column>
+          <Ref innerRef={contextRef}>
+        <Segment id="main-segment">
+        <Rail position='left'>
+                <Sticky
+                  bottomOffset={50}
+                  context={contextRef}
+                  offset={25}
+                  pushing
+                  id="sticky-segment"
+                >
+                  <Menu vertical style={{width:'144px', marginLeft:'63px'}}>
+                    <Menu.Item
+                    name='profil'
+                    >
+                    <Header as='h4'>Profil</Header>
+                    </Menu.Item>
+
+                    <Menu.Item
+                    name='competences'
+                    >
+                    <Header as='h4'>Compétences</Header>
+                    </Menu.Item>
+                    <Menu.Item
+                    name='experiences'
+                    >
+                    <Header as='h4'>Expériences</Header>
+                    </Menu.Item>
+                    <Menu.Item
+                    name='projets'
+                    >
+                    <Header as='h4'>Projets</Header>
+                    </Menu.Item>
+                    <Menu.Item
+                    name='contact'
+                    >
+                    <Header as='h4'>Contact</Header>
+                    </Menu.Item>
+                </Menu>
+                </Sticky>
+              </Rail>
+          <Profil />
+          <Competences data={dataCompetences}/>    
+          <Experiences />
+          <Realisations />
+          <Footer />
+        </Segment>
+        </Ref>
+        </Grid.Column>
+      </Grid>
     </div>
   );
 };
