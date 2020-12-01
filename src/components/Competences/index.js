@@ -13,21 +13,25 @@ import './styles.scss';
 
 const C = ( {data} ) => {
     const MAXRATING = 5;
+    const square = { width: 175, height: 175 }
     const competencesJSX = data.map((item) => {
     return (
         <Popup
             size='tiny'
             hideOnScroll
             key={item.id}
+            circular
+            id="popup-hover"
             trigger={
                 <Segment
                     key={item.id}
                     color={item.color}
                     id="segment-list"
+                    circular
+                    style={square}
                 >
                     <List.Item key={item.id}>
                         <Header as='h3'>{item.text}</Header>
-                    </List.Item>
                     <Rating
                         disabled
                         icon='star'
@@ -35,6 +39,7 @@ const C = ( {data} ) => {
                         maxRating={MAXRATING}
                         id="rating-list"
                     />
+                    </List.Item>
                 </Segment>
             }>
             <Popup.Content>

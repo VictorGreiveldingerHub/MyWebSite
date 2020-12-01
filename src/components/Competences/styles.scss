@@ -17,15 +17,18 @@
 };
 
 #segment-list {
-    display: flex;
-    width: 48%;
+    // display: flex;
+    // width: 48%;
     margin: 14px 3px;
-    justify-content: space-between;
+    // justify-content: space-between;
+    background-color: white;
 };
 
+ 
 #segment-list:hover {
+    transition: all 0.7s ease-in-out 0s;
     background-color: rgba(151, 148, 148, 0.61);
-};
+}
 
 #rating-list:hover {
     font-size: 1.2rem;
