@@ -1,5 +1,6 @@
 // == Import npm
-import React, {createRef} from 'react';
+import React, { createRef } from 'react';
+
 import {
   Header,
   Icon,
@@ -12,8 +13,10 @@ import {
   Rail,
   Sticky,
 } from 'semantic-ui-react';
-// == Import
 
+import { Bounce } from "react-awesome-reveal";
+
+// == Import data & images & styles
 import Logo from 'src/assets/Images/Final.svg';
 import BackgroundPicture from 'src/assets/Images/ba.jpg';
 import dataCompetences from 'src/data/competences.js';
@@ -65,16 +68,18 @@ const Site = () => {
               textAlign='center'
               inverted
             />
-
-            <Icon id="arrowdown" inverted color="white" name="angle double down" size="huge"/>
+            <a href="#profil-segment">
+                <Icon id="arrowdown" inverted color="white" name="angle double down" size="huge" />
+            </a>
+                      
           </Container>
         </div>
       </div>
       <Grid centered columns={1}>
-      <Grid.Column>
+        <Grid.Column>
           <Ref innerRef={contextRef}>
-        <Segment id="main-segment">
-        <Rail position='left'>
+            <Segment id="main-segment">
+              <Rail position='left'>
                 <Sticky
                   bottomOffset={50}
                   context={contextRef}
@@ -86,39 +91,59 @@ const Site = () => {
                     <Menu.Item
                     name='profil'
                     >
-                    <Header as='h4'>Profil</Header>
+                    <Header as='h4'>
+                      <a href="#profil-segment">
+                        Profil
+                      </a>
+                    </Header>
                     </Menu.Item>
 
                     <Menu.Item
                     name='competences'
                     >
-                    <Header as='h4'>Compétences</Header>
+                    <Header as='h4'>
+                      <a href="#segment-competences">
+                        Compétences
+                      </a>
+                    </Header>
                     </Menu.Item>
                     <Menu.Item
                     name='experiences'
                     >
-                    <Header as='h4'>Expériences</Header>
+                    <Header as='h4'>
+                      <a href="#experience-segment">
+                        Expériences
+                      </a>
+                    </Header>
                     </Menu.Item>
                     <Menu.Item
                     name='projets'
                     >
-                    <Header as='h4'>Projets</Header>
+                    <Header as='h4'>
+                      <a href="#realisation-segment">
+                        Projets
+                      </a>
+                    </Header>
                     </Menu.Item>
                     <Menu.Item
                     name='contact'
                     >
-                    <Header as='h4'>Contact</Header>
+                    <Header as='h4'>
+                      <a href="#footer">
+                        Contact
+                      </a>
+                    </Header>
                     </Menu.Item>
-                </Menu>
+                  </Menu>
                 </Sticky>
               </Rail>
-          <Profil />
-          <Competences data={dataCompetences}/>    
-          <Experiences />
-          <Realisations />
-          <Footer />
-        </Segment>
-        </Ref>
+              <Profil />
+              <Competences data={dataCompetences}/>    
+              <Experiences />
+              <Realisations />
+              <Footer />
+            </Segment>
+          </Ref>
         </Grid.Column>
       </Grid>
     </div>

@@ -6,10 +6,7 @@ import {
     List,
 } from 'semantic-ui-react';
 // Pour l'animation du cercle
-import {
-    CircularProgressbar,
-    buildStyles,
-} from "react-circular-progressbar";
+import { CircularProgressbar } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
 import { motion } from "framer-motion";
 import { easeQuadInOut } from "d3-ease";
