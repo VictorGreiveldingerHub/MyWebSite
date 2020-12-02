@@ -11,7 +11,7 @@ import {
     buildStyles,
 } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
-
+import { motion } from "framer-motion";
 import { easeQuadInOut } from "d3-ease";
 import AnimatedProgressProvider from "./animated.js";
 
@@ -20,44 +20,46 @@ import { Slide } from "react-awesome-reveal";
 import './styles.scss';
 
 const C = ( {data} ) => {
-    // const MAXRATING = 5;
+    const MIN_RATING = 0; 
     const competencesJSX = data.map((item) => {
-    return (
-        <Segment
-            key={item.id}
-            id="segment-list"
-            circular
-        >
-            <Slide fraction="0.5" cascade>
-                <List.Item key={item.id}>
-                    <Header as='h3'>{item.text}</Header>
-                </List.Item>
-            </Slide>
-            <AnimatedProgressProvider
-                valueStart={0}
-                valueEnd={66}
-                duration={1.4}
-                easingFunction={easeQuadInOut}
-                id="display"
-            >
-                {value => {
-                const roundedValue = Math.round(value);
-                return (
-                    <CircularProgressbar
-                    value={value}
-                    text={`${roundedValue}%`}
-                    styles={buildStyles({ pathTransition: "none" })}
-                    />
-                );
-                }}
-            </AnimatedProgressProvider>
-        </Segment>
-
+        return (
+            <div id="segment-list">
+                <motion.button
+                    id="circleHover"
+                    whileHover={{ scale: 1.2}}
+                    whileTap={{ scale: 0.8 }}
+                >
+                <Slide fraction="0.5" triggerOnce cascade>
+                    <List.Item key={item.id}>
+                        <Header as='h3' id="">{item.text}</Header>
+                    </List.Item>
+                </Slide>
+                <Slide fraction="1" delay="3" cascade triggerOnce>
+                    <AnimatedProgressProvider
+                        valueStart={MIN_RATING}
+                        valueEnd={item.rating}
+                        duration={3}
+                        easingFunction={easeQuadInOut}
+                        id="display"
+                    >
+                        {value => {
+                        const roundedValue = Math.round(value);
+                        return (
+                            <CircularProgressbar
+                            value={value}
+                            text={`${roundedValue}%`}
+                            >
+                                <div>{item.text}</div>
+                            </CircularProgressbar>
+                        );
+                        }}
+                    </AnimatedProgressProvider>
+                </Slide>
+                </motion.button>
+            </div>
         );
-    }); 
-            // <Segment id="display" circular>
-            
-            // </Segment>   
+    });
+  
     return (
         <Segment id="segment-competences" vertical textAlign='center'>
             <Header as='h2'>

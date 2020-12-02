@@ -17,24 +17,17 @@
 };
 
 #segment-list {
-    // display: flex;
-    // width: 48%;
-    width: 175px;
-    height: 175px;
     margin: 14px 3px;
-    // justify-content: space-between;
+    padding: 20px 0px;
 };
 
-#display {
-    display: none;
-    width: 175px;
-    height: 175px;
+#circleHover {
+    background-color: transparent;
+    border: none;
+    width: 150px;
 }
-
-#segment-list:hover {
-    #display {
-        display: initial;
-    };
-}
-
 /////////////////HOVER POPUP TEST avec react awesome reveal////////////
+.CircularProgressbar .CircularProgressbar-trail {
+    stroke: white;
+    stroke-linecap: round;
+}

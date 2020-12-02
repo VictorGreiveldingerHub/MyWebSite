@@ -48,6 +48,7 @@
   },
   "dependencies": {
     "d3-ease": "^2.0.0",
+    "framer-motion": "^2.9.5",
     "prop-types": "*",
     "react": "^16.13.1",
     "react-awesome-reveal": "^3.5.1",
