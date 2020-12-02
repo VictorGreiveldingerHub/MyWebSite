@@ -4,55 +4,60 @@ import {
     Segment,
     Header,
     List,
-    Rating,
-    Popup,
-    Card
 } from 'semantic-ui-react';
+// Pour l'animation du cercle
+import {
+    CircularProgressbar,
+    buildStyles,
+} from "react-circular-progressbar";
+import "react-circular-progressbar/dist/styles.css";
+
+import { easeQuadInOut } from "d3-ease";
+import AnimatedProgressProvider from "./animated.js";
 
 import { Slide } from "react-awesome-reveal";
 
 import './styles.scss';
 
 const C = ( {data} ) => {
-    const MAXRATING = 5;
+    // const MAXRATING = 5;
     const competencesJSX = data.map((item) => {
     return (
-        <Popup
-            size='tiny'
-            hideOnScroll
+        <Segment
             key={item.id}
-            id="popup-hover"
-            trigger={
-                <Segment
-                    key={item.id}
-                    id="segment-list"
-                    circular
-                >
-                    <Slide fraction="0.5" cascade>
-                    <List.Item key={item.id}>
-                        <Header as='h3'>{item.text}</Header>
-                    <Rating
-                        disabled
-                        icon='star'
-                        defaultRating={item.rating}
-                        maxRating={MAXRATING}
-                        id="rating-list"
+            id="segment-list"
+            circular
+        >
+            <Slide fraction="0.5" cascade>
+                <List.Item key={item.id}>
+                    <Header as='h3'>{item.text}</Header>
+                </List.Item>
+            </Slide>
+            <AnimatedProgressProvider
+                valueStart={0}
+                valueEnd={66}
+                duration={1.4}
+                easingFunction={easeQuadInOut}
+                id="display"
+            >
+                {value => {
+                const roundedValue = Math.round(value);
+                return (
+                    <CircularProgressbar
+                    value={value}
+                    text={`${roundedValue}%`}
+                    styles={buildStyles({ pathTransition: "none" })}
                     />
-                    </List.Item>
-                    </Slide>
-                </Segment>
-            }>
-            <Popup.Content>
-            <Card
-                id="card-hover"
-                header={item.header}
-                meta={item.meta}
-                description={item.description}
-            />
-            </Popup.Content>
-        </Popup>
-    );
-    });
+                );
+                }}
+            </AnimatedProgressProvider>
+        </Segment>
+
+        );
+    }); 
+            // <Segment id="display" circular>
+            
+            // </Segment>   
     return (
         <Segment id="segment-competences" vertical textAlign='center'>
             <Header as='h2'>

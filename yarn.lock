@@ -815,17 +815,17 @@
   dependencies:
     regenerator-runtime "^0.13.4"
 
+"@babel/runtime@^7.10.3", "@babel/runtime@^7.7.2":
+  version "7.12.5"
+  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.12.5.tgz#410e7e487441e1b360c29be715d870d9b985882e"
+  integrity sha512-plcc+hbExy3McchJCEQG3knOsuh3HH+Prx1P6cLIkET/0dLuQDEnrT+s27Axgc9bqfsmNUNHfscgMUdBpC9xfg==
+  dependencies:
+    regenerator-runtime "^0.13.4"
+
 "@babel/runtime@^7.4.5", "@babel/runtime@^7.8.4":
   version "7.9.2"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.9.2.tgz#d90df0583a3a252f09aaa619665367bae518db06"
   integrity sha512-NE2DtOdufG7R5vnfQUTehdTfNycfUANEtCa9PssN9O/xmTzP4E08UI797ixaei6hBEVL9BI/PsdJS5x7mWoB9Q==
-  dependencies:
-    regenerator-runtime "^0.13.4"
-
-"@babel/runtime@^7.7.2":
-  version "7.12.5"
-  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.12.5.tgz#410e7e487441e1b360c29be715d870d9b985882e"
-  integrity sha512-plcc+hbExy3McchJCEQG3knOsuh3HH+Prx1P6cLIkET/0dLuQDEnrT+s27Axgc9bqfsmNUNHfscgMUdBpC9xfg==
   dependencies:
     regenerator-runtime "^0.13.4"
 
@@ -2093,11 +2093,6 @@ class-utils@^0.3.5:
     isobject "^3.0.0"
     static-extend "^0.1.1"
 
-classnames@^2.2.6:
-  version "2.2.6"
-  resolved "https://registry.yarnpkg.com/classnames/-/classnames-2.2.6.tgz#43935bffdd291f326dad0a205309b38d00f650ce"
-  integrity sha512-JR/iSQOSt+LQIWwrwEzJ9uk0xfN3mTVYMwt1Ir5mUcSN6pU+V4zQFFaJsclJbPuAUQH+yfWef6tm7l1quW3C8Q==
-
 clean-css@^4.2.3:
   version "4.2.3"
   resolved "https://registry.yarnpkg.com/clean-css/-/clean-css-4.2.3.tgz#507b5de7d97b48ee53d84adb0160ff6216380f78"
@@ -2762,6 +2757,16 @@ cyclist@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/cyclist/-/cyclist-1.0.1.tgz#596e9698fd0c80e12038c2b82d6eb1b35b6224d9"
   integrity sha1-WW6WmP0MgOEgOMK4LW6xs1tiJNk=
+
+d3-ease@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/d3-ease/-/d3-ease-2.0.0.tgz#fd1762bfca00dae4bacea504b1d628ff290ac563"
+  integrity sha512-68/n9JWarxXkOWMshcT5IcjbB+agblQUaIsbnXmrzejn2O82n3p2A9R2zEB9HIEFWKFwPAEDDN8gR0VdSAyyAQ==
+
+d3-timer@^1.0.9:
+  version "1.0.10"
+  resolved "https://registry.yarnpkg.com/d3-timer/-/d3-timer-1.0.10.tgz#dfe76b8a91748831b13b6d9c793ffbd508dd9de5"
+  integrity sha512-B1JDm0XDaQC+uvo4DT79H0XmBskgS3l6Ve+1SBCfxgmtIb1AVrPIoqd+nPSv+loMX8szQ0sVUhGngL7D5QPiXw==
 
 d@1, d@^1.0.1:
   version "1.0.1"
@@ -4027,11 +4032,6 @@ graceful-fs@^4.1.11, graceful-fs@^4.1.15, graceful-fs@^4.1.2, graceful-fs@^4.1.6
   resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.2.3.tgz#4a12ff1b60376ef09862c2093edd908328be8423"
   integrity sha512-a30VEBm4PEdx1dRB7MFK7BejejvCvBronbLjht+sHuGYj8PHs7M/5Z+rt5lw551vZ7yfTCj4Vuyy3mSJytDWRQ==
 
-hamburger-react@^2.2.0:
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/hamburger-react/-/hamburger-react-2.2.0.tgz#71494756710a4f63699acbce899657d87c3f1f3a"
-  integrity sha512-7bRKPseNk2K1Upg4kP/yDcg28/wUCnGBVp1699qkyktCi2WjxQEaru9DKGZaqDJJYZzqdyLvLc9oHz3rBXm3PQ==
-
 handle-thing@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/handle-thing/-/handle-thing-2.0.0.tgz#0e039695ff50c93fc288557d696f3c1dc6776754"
@@ -4926,6 +4926,13 @@ jsx-ast-utils@^2.2.1, jsx-ast-utils@^2.2.3:
   dependencies:
     array-includes "^3.0.3"
     object.assign "^4.1.0"
+
+kapellmeister@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/kapellmeister/-/kapellmeister-3.0.1.tgz#419b715cd221acda3db79892caedf63e1c9f7d25"
+  integrity sha512-S7+gYcziMREv8RxG46138mb1O4Xf9II/bCxEJPYkhlZ7PgGWTlicgsyNad/DGc5oEAlWGLXE5ExLbTDVvJmgDA==
+  dependencies:
+    d3-timer "^1.0.9"
 
 keyboard-key@^1.1.0:
   version "1.1.0"
@@ -7185,6 +7192,11 @@ react-awesome-reveal@^3.5.1:
     "@emotion/react" "^11.1.1"
     react-intersection-observer "^8.30.3"
 
+react-circular-progressbar@^2.0.3:
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/react-circular-progressbar/-/react-circular-progressbar-2.0.3.tgz#fa8eb59f8db168d2904bae4590641792c80f5991"
+  integrity sha512-YKN+xAShXA3gYihevbQZbavfiJxo83Dt1cUxqg/cltj4VVsRQpDr7Fg1mvjDG3x1KHGtd9NmYKvJ2mMrPwbKyw==
+
 react-dom@*:
   version "16.13.1"
   resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-16.13.1.tgz#c1bd37331a0486c078ee54c4740720993b2e0e7f"
@@ -7194,16 +7206,6 @@ react-dom@*:
     object-assign "^4.1.1"
     prop-types "^15.6.2"
     scheduler "^0.19.1"
-
-react-elastic-carousel@^0.9.5:
-  version "0.9.5"
-  resolved "https://registry.yarnpkg.com/react-elastic-carousel/-/react-elastic-carousel-0.9.5.tgz#09fe1d82638d32d36e53847dfaef893329edc726"
-  integrity sha512-U64QzuVPXEFJ+czzxgvMIGOSUKvC01Unl99gDzhdOj/Ypz1iVh49XBo428Z3LvIYx1n2CtrJFjpx0i2TBPD4Ug==
-  dependencies:
-    classnames "^2.2.6"
-    react-only-when "^1.0.2"
-    react-swipeable "^5.5.1"
-    resize-observer-polyfill "1.5.0"
 
 react-fast-compare@^3.0.1:
   version "3.2.0"
@@ -7220,10 +7222,14 @@ react-is@^16.6.0, react-is@^16.6.3, react-is@^16.7.0, react-is@^16.8.1, react-is
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
   integrity sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
 
-react-only-when@^1.0.2:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/react-only-when/-/react-only-when-1.0.2.tgz#a8a79b48dd6cfbd91ddc710674a94153e88039d3"
-  integrity sha512-agE6l3L6bqaVuwNtjihTQ36M+VBfPS63KOzcNL4ZTmlwSxQPvhzIqmBWfiol0/wLYmKxCcBqgXkEJpvj5Kob8Q==
+react-move@^6.4.0:
+  version "6.4.0"
+  resolved "https://registry.yarnpkg.com/react-move/-/react-move-6.4.0.tgz#9163a87c62fff94bf6e6980685c713739192650e"
+  integrity sha512-TNyDQESDZ0xsejnxFTQ9CKarJQN6NbgpImrvIEzOVe7+jt8y7uTjJwWxqFTfmvwskIs+RmUbCWdN7PAbGyhrdA==
+  dependencies:
+    "@babel/runtime" "^7.10.3"
+    kapellmeister "^3.0.1"
+    prop-types "^15.7.2"
 
 react-popper@^2.2.3:
   version "2.2.3"
@@ -7261,13 +7267,6 @@ react-router@5.2.0:
     react-is "^16.6.0"
     tiny-invariant "^1.0.2"
     tiny-warning "^1.0.0"
-
-react-swipeable@^5.5.1:
-  version "5.5.1"
-  resolved "https://registry.yarnpkg.com/react-swipeable/-/react-swipeable-5.5.1.tgz#48ae6182deaf62f21d4b87469b60281dbd7c4a76"
-  integrity sha512-EQObuU3Qg3JdX3WxOn5reZvOSCpU4fwpUAs+NlXSN3y+qtsO2r8VGkVnOQzmByt3BSYj9EWYdUOUfi7vaMdZZw==
-  dependencies:
-    prop-types "^15.6.2"
 
 react@^16.13.1:
   version "16.13.1"
@@ -7472,11 +7471,6 @@ requires-port@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/requires-port/-/requires-port-1.0.0.tgz#925d2601d39ac485e091cf0da5c6e694dc3dcaff"
   integrity sha1-kl0mAdOaxIXgkc8NpcbmlNw9yv8=
-
-resize-observer-polyfill@1.5.0:
-  version "1.5.0"
-  resolved "https://registry.yarnpkg.com/resize-observer-polyfill/-/resize-observer-polyfill-1.5.0.tgz#660ff1d9712a2382baa2cad450a4716209f9ca69"
-  integrity sha512-M2AelyJDVR/oLnToJLtuDJRBBWUGUvvGigj1411hXhAdyFWqMaqHp7TixW3FpiLuVaikIcR1QL+zqoJoZlOgpg==
 
 resolve-cwd@^2.0.0:
   version "2.0.0"

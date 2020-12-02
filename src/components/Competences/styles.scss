@@ -23,18 +23,18 @@
     height: 175px;
     margin: 14px 3px;
     // justify-content: space-between;
-    background-color: white;
 };
 
- 
-#segment-list:hover {
-    transition: all 0.7s linear 0s;
-    background-color: rgba(151, 148, 148, 0.61);
+#display {
+    display: none;
+    width: 175px;
+    height: 175px;
 }
 
-#rating-list:hover {
-    font-size: 1.2rem;
-};
-
+#segment-list:hover {
+    #display {
+        display: initial;
+    };
+}
 
 /////////////////HOVER POPUP TEST avec react awesome reveal////////////
