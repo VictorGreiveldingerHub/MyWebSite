@@ -50,6 +50,7 @@
     "hamburger-react": "^2.2.0",
     "prop-types": "*",
     "react": "^16.13.1",
+    "react-awesome-reveal": "^3.5.1",
     "react-dom": "*",
     "react-elastic-carousel": "^0.9.5",
     "react-router-dom": "^5.2.0",

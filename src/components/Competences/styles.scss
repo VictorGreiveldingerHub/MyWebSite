@@ -1,6 +1,6 @@
 @media (max-width: 700px) {
     #segment-list {
-        width: 80% !important;
+        width: 234px !important;
         margin: 5px auto !important;
     };
 
@@ -19,6 +19,8 @@
 #segment-list {
     // display: flex;
     // width: 48%;
+    width: 175px;
+    height: 175px;
     margin: 14px 3px;
     // justify-content: space-between;
     background-color: white;
@@ -26,10 +28,13 @@
 
  
 #segment-list:hover {
-    transition: all 0.7s ease-in-out 0s;
+    transition: all 0.7s linear 0s;
     background-color: rgba(151, 148, 148, 0.61);
 }
 
 #rating-list:hover {
     font-size: 1.2rem;
 };
+
+
+/////////////////HOVER POPUP TEST avec react awesome reveal////////////

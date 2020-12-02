@@ -20,7 +20,6 @@ import dataCompetences from 'src/data/competences.js';
 import './styles.scss';
 
 // == Components Imports
-import StickMenu from 'src/components/StickMenu';
 import Profil from 'src/components/Profil';
 import Competences from 'src/components/Competences';
 import Experiences from 'src/components/Experiences';
@@ -66,6 +65,7 @@ const Site = () => {
               textAlign='center'
               inverted
             />
+
             <Icon id="arrowdown" inverted color="white" name="angle double down" size="huge"/>
           </Container>
         </div>

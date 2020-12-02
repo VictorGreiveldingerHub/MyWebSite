@@ -9,27 +9,26 @@ import {
     Card
 } from 'semantic-ui-react';
 
+import { Slide } from "react-awesome-reveal";
+
 import './styles.scss';
 
 const C = ( {data} ) => {
     const MAXRATING = 5;
-    const square = { width: 175, height: 175 }
     const competencesJSX = data.map((item) => {
     return (
         <Popup
             size='tiny'
             hideOnScroll
             key={item.id}
-            circular
             id="popup-hover"
             trigger={
                 <Segment
                     key={item.id}
-                    color={item.color}
                     id="segment-list"
                     circular
-                    style={square}
                 >
+                    <Slide fraction="0.5" cascade>
                     <List.Item key={item.id}>
                         <Header as='h3'>{item.text}</Header>
                     <Rating
@@ -40,10 +39,12 @@ const C = ( {data} ) => {
                         id="rating-list"
                     />
                     </List.Item>
+                    </Slide>
                 </Segment>
             }>
             <Popup.Content>
             <Card
+                id="card-hover"
                 header={item.header}
                 meta={item.meta}
                 description={item.description}
