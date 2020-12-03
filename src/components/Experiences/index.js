@@ -10,6 +10,7 @@ import {
     Modal,
     Button,
 } from 'semantic-ui-react';
+import { Bounce, Zoom } from 'react-reveal';
 import './styles.scss';
 
 
@@ -20,12 +21,15 @@ const C = () => {
         <Segment vertical textAlign='center' id="experience-segment">
             <Container text>
                 <Header as='h2'>
+                <Bounce left cascade>
                     Expériences
+                </Bounce>
                 </Header>
                 <Item.Group>
+                <Zoom right cascade>
                     <Item>
                         <Item.Content>
-                            <Item.Header>Développeur Front Web et Web Mobile</Item.Header>
+                            <Header as='h3'>Développeur Front Web et Web Mobile</Header>
                             <Item.Meta>O'clock - Avril 2020 / Mai 2020</Item.Meta>
                             <Item.Description>Projet de fin d'étude d'une durée de 1 mois</Item.Description>
                             <Item.Extra>
@@ -57,7 +61,7 @@ const C = () => {
                         <Divider section />
                     <Item>
                         <Item.Content>
-                            <Item.Header>Agent de tri</Item.Header>
+                            <Header as='h3'>Agent de tri</Header> 
                             <Item.Meta>La Poste - Metz</Item.Meta>
                             <Item.Description>Tri des lettres / colis passants par la poste. Nettoyage des locaux</Item.Description>
                             <Item.Extra>Mission d'interim</Item.Extra>
@@ -66,7 +70,7 @@ const C = () => {
                         <Divider section />
                             <Item>
                                 <Item.Content>
-                                    <Item.Header>Agent de production</Item.Header>
+                                    <Header as='h3'>Agent de production</Header> 
                                     <Item.Meta>Imprimerie Centrale - Luxembourg</Item.Meta>
                                     <Item.Description>
                                         Mise en machine de feuille pour produire des magazines, journaux.
@@ -76,7 +80,7 @@ const C = () => {
                                     <Item.Extra>Job d'été</Item.Extra>
                                 </Item.Content>
                             </Item>
-                        
+                        </Zoom>          
                 </Item.Group>
                 <Divider section />
                 <Loader active size="medium" inline='centered'>

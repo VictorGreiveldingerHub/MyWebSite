@@ -11,6 +11,8 @@ import "react-circular-progressbar/dist/styles.css";
 import { motion } from "framer-motion";
 import { easeQuadInOut } from "d3-ease";
 import AnimatedProgressProvider from "./animated.js";
+import { Zoom } from 'react-reveal';
+
 
 import { Slide } from "react-awesome-reveal";
 
@@ -60,7 +62,9 @@ const C = ( {data} ) => {
     return (
         <Segment id="segment-competences" vertical textAlign='center'>
             <Header as='h2'>
-                Compétences
+            <Zoom top cascade>
+            Compétences
+            </Zoom>   
             </Header>
             <List id="list-item">
                 {competencesJSX}

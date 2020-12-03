@@ -1,6 +1,6 @@
 // == Import npm
 import React, { createRef } from 'react';
-
+import { layoutGenerator } from 'react-break';
 import {
   Header,
   Icon,
@@ -30,16 +30,29 @@ import Realisations from 'src/components/Realisations';
 import Footer from 'src/components/Footer';
 
 const Site = () => {
+
   var sectionStyle = {
     width: "100%",
-    height: "689px",
+    height: "666px",
     marginBottom: "0",
     padding: "0",
     position: 'relative',
     backgroundSize: "cover",
-    background: "no-repeat fixed center",
+    background: "repeat fixed center",
     backgroundImage: `url(${BackgroundPicture})`
   };
+
+  const layout = layoutGenerator({
+    mobile: 0,
+    phablet: 550,
+    tablet: 768,
+    desktop: 992,
+  });
+
+  const OnMobile = layout.is('mobile');
+  const OnAtLeastTablet = layout.isAtLeast('tablet');
+  const OnAtMostPhablet = layout.isAtMost('phablet');
+  const OnDesktop = layout.is('desktop');
   
   const contextRef = createRef();
 
@@ -76,9 +89,11 @@ const Site = () => {
               Développeur Web & Web Mobile Junior
             </Roll>
             </Header>
-            <a href="#profil-segment">
+            <OnDesktop>
+              <a href="#profil-segment">
                 <Icon id="arrowdown" inverted color="white" name="angle double down" size="huge" />
-            </a>
+              </a>
+            </OnDesktop>
                       
           </Container>
         </div>
@@ -87,6 +102,7 @@ const Site = () => {
         <Grid.Column>
           <Ref innerRef={contextRef}>
             <Segment id="main-segment">
+            <OnDesktop>
               <Rail position='left'>
                 <Sticky
                   bottomOffset={50}
@@ -145,6 +161,7 @@ const Site = () => {
                   </Menu>
                 </Sticky>
               </Rail>
+              </OnDesktop>
               <Profil />
               <Competences data={dataCompetences}/>    
               <Experiences />

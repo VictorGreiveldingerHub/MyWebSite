@@ -5,9 +5,9 @@ body {
     font-family: 'Open Sans', sans-serif !important;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 992px) {
     #main-segment {
-        margin: 0 2px !important;
+        margin: 0 !important;
     }
 }
 
@@ -30,9 +30,6 @@ body {
     padding-top: 27px;
     animation: bounce 0.7s ease infinite;
 };
-
-
-
 
 @keyframes bounce {
     from {transform: translateY(0);}

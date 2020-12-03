@@ -12,6 +12,7 @@ import {
 } from 'semantic-ui-react';
 
 import { motion } from "framer-motion";
+import { Zoom } from 'react-reveal';
 
 import Profil from 'src/assets/Images/profil.png';
 import Opquast from 'src/assets/Images/Opquast.png';
@@ -27,8 +28,11 @@ const C = () => {
         <Segment id="profil-segment" vertical textAlign='center'>
         <Header
           as='h2'
-          content="Profil"
-        />
+        >
+        <Zoom top cascade>
+            Profil
+        </Zoom>
+        </Header>
         <Header
             as='h3'
             content="Tout droit sorti d'une formation de 5 mois chez O'Clock, je suis aujourd'hui impatient de travailler"
