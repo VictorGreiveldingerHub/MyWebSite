@@ -26,12 +26,12 @@ const C = ( {data} ) => {
                     whileHover={{ scale: 1.2}}
                     whileTap={{ scale: 0.8 }}
                 >
-                <Slide fraction="0.5" triggerOnce cascade>
+                <Slide fraction="0.2" cascade>
                     <List.Item key={item.id}>
                         <Header as='h3' id="">{item.text}</Header>
                     </List.Item>
                 </Slide>
-                <Slide fraction="1" delay="3" cascade triggerOnce>
+                <Slide fraction="0.2" cascade triggerOnce>
                     <AnimatedProgressProvider
                         valueStart={MIN_RATING}
                         valueEnd={item.rating}

@@ -11,6 +11,8 @@ import {
     Popup,
 } from 'semantic-ui-react';
 
+import { motion } from "framer-motion";
+
 import Profil from 'src/assets/Images/profil.png';
 import Opquast from 'src/assets/Images/Opquast.png';
 import eLAO from 'src/assets/Images/eLAO.png';
@@ -77,7 +79,17 @@ const C = () => {
                         onClose={() => setOpen(false)}
                         onOpen={() => setOpen(true)}
                         open={open}
-                        trigger={<Button id="buttonWhy">O'clock ?</Button>}
+                        trigger={
+                            <motion.button
+                                id="button-hover"
+                                whileHover={{ scale: 1.1 }}
+                                whileTap={{ scale: 0.9 }}
+                            >
+                            <Button id="buttonWhy">
+                                O'clock ?
+                            </Button>
+                            </motion.button>
+                        }
                         >
                         <Modal.Header>
                             Titre professionnel Développeur Web et Web Mobile - Niveau 5 (bac+2)
@@ -121,7 +133,17 @@ const C = () => {
                         onClose={() => setOpenOpquast(false)}
                         onOpen={() => setOpenOpquast(true)}
                         open={openOpquast}
-                        trigger={<Button id="buttonWhy">Opquast ?</Button>}
+                        trigger={
+                            <motion.button
+                                id="button-hover"
+                                whileHover={{ scale: 1.1 }}
+                                whileTap={{ scale: 0.9 }}
+                            >
+                            <Button id="buttonWhy">
+                                Opquast® ?
+                            </Button>
+                            </motion.button>
+                        }
                         >
                         <Modal.Header>Opquast</Modal.Header>
                         <Modal.Content image>
@@ -155,7 +177,17 @@ const C = () => {
                         onClose={() => setOpenElao(false)}
                         onOpen={() => setOpenElao(true)}
                         open={openElao}
-                        trigger={<Button id="buttonWhy">eLAO ?</Button>}
+                        trigger={
+                            <motion.button
+                                id="button-hover"
+                                whileHover={{ scale: 1.1 }}
+                                whileTap={{ scale: 0.9 }}
+                            >
+                            <Button id="buttonWhy">
+                                eLAO ?
+                            </Button>
+                            </motion.button>
+                        }
                         >
                         <Modal.Header>ELAO</Modal.Header>
                         <Modal.Content image>

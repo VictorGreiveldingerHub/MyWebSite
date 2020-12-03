@@ -14,7 +14,7 @@ import {
   Sticky,
 } from 'semantic-ui-react';
 
-import { Bounce } from "react-awesome-reveal";
+import { Zoom, Roll } from 'react-reveal';
 
 // == Import data & images & styles
 import Logo from 'src/assets/Images/Final.svg';
@@ -55,19 +55,27 @@ const Site = () => {
               id="logo"
               centered
             />
+
             <Header
               as='h1'
               id="name-header"
-              content='Victor Greiveldinger'
               textAlign='center'
               inverted
-            />
+            >
+            <Zoom top cascade>
+              Victor Greiveldinger
+            </Zoom>
+            </Header>
             <Header
               as='h2'
-              content='Développeur Web & Web Mobile Junior'
+              content=''
               textAlign='center'
               inverted
-            />
+            >
+            <Roll top cascade>
+              Développeur Web & Web Mobile Junior
+            </Roll>
+            </Header>
             <a href="#profil-segment">
                 <Icon id="arrowdown" inverted color="white" name="angle double down" size="huge" />
             </a>

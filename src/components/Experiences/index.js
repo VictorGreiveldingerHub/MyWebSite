@@ -59,7 +59,7 @@ const C = () => {
                         <Item.Content>
                             <Item.Header>Agent de tri</Item.Header>
                             <Item.Meta>La Poste - Metz</Item.Meta>
-                            <Item.Description>Tri des lettres / colis passants par la poste</Item.Description>
+                            <Item.Description>Tri des lettres / colis passants par la poste. Nettoyage des locaux</Item.Description>
                             <Item.Extra>Mission d'interim</Item.Extra>
                         </Item.Content>
                     </Item>

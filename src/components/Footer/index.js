@@ -9,6 +9,8 @@ import {
     Image,
     Header,
 } from 'semantic-ui-react';
+import { motion } from "framer-motion";
+
 import './styles.scss';
 
 // Import des logos nécessaire
@@ -33,19 +35,79 @@ const C = () => {
                     <Grid.Column>
                         <List id="list" horizontal>
                             <List.Item id="list-item">
+                            <motion.button
+                                id="icon-hover"
+                                whileHover={{ scale: 1.5 }}
+                                whileTap={{ scale: 0.9 }}
+                            >
+                            <motion.div
+                                animate={{
+                                    scale: [1, 2, 2, 1, 1],
+                                    rotate: [0, 0, 360, 360, 0],
+                                    borderRadius: ["20%", "20%", "50%", "50%", "20%"]
+                                }}
+                                transition={{
+                                    duration: 2,
+                                    ease: "easeInOut",
+                                    times: [0, 0.2, 0.5, 0.8, 1],
+                                    repeatDelay: 1
+                                }}
+                            >
                                 <a href='https://github.com/VictorGreiveldingerHub' target='no_blank'>
                                     <Image id="list-logo" src={Github}/>
                                 </a>
+                            </motion.div>
+                            </motion.button>
                             </List.Item>
                             <List.Item id="list-item">
+                            <motion.button
+                                id="icon-hover"
+                                whileHover={{ scale: 1.5 }}
+                                whileTap={{ scale: 0.9 }}
+                            >
+                            <motion.div
+                                animate={{
+                                    scale: [1, 2, 2, 1, 1],
+                                    rotate: [0, 0, 360, 360, 0],
+                                    borderRadius: ["20%", "20%", "50%", "50%", "20%"]
+                                }}
+                                transition={{
+                                    duration: 2,
+                                    ease: "easeInOut",
+                                    times: [0, 0.2, 0.5, 0.8, 1],
+                                    repeatDelay: 1
+                                }}
+                            >
                                 <a href='https://www.linkedin.com/in/victor-greiveldinger-0b21471a7/' target='no_blank'>
                                     <Image id="list-logo" src={Linkedin}/>
                                 </a>
+                            </motion.div>
+                            </motion.button>
                             </List.Item>
                             <List.Item id="list-item">
+                            <motion.button
+                                id="icon-hover"
+                                whileHover={{ scale: 1.5 }}
+                                whileTap={{ scale: 0.9 }}
+                            >
+                            <motion.div
+                                animate={{
+                                    scale: [1, 2, 2, 1, 1],
+                                    rotate: [0, 0, 360, 360, 0],
+                                    borderRadius: ["20%", "20%", "50%", "50%", "20%"]
+                                }}
+                                transition={{
+                                    duration: 2,
+                                    ease: "easeInOut",
+                                    times: [0, 0.2, 0.5, 0.8, 1],
+                                    repeatDelay: 1
+                                }}
+                            >
                                 <a href='https://www.facebook.com/victor.greiveldinger?ref=bookmarks' target='no_blank'>
                                     <Image id="list-logo" src={Facebook}/>
                                 </a>
+                                </motion.div>
+                                </motion.button>
                             </List.Item>
                         </List>
                     </Grid.Column>
