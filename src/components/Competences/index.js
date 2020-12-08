@@ -12,8 +12,6 @@ import { motion } from "framer-motion";
 import { easeQuadInOut } from "d3-ease";
 import AnimatedProgressProvider from "./animated.js";
 import { Zoom } from 'react-reveal';
-
-
 import { Slide } from "react-awesome-reveal";
 
 import './styles.scss';
@@ -30,7 +28,7 @@ const C = ( {data} ) => {
                 >
                 <Slide fraction="0.2" cascade>
                     <List.Item key={item.id}>
-                        <Header as='h3' id="">{item.text}</Header>
+                        <Header as='h3' id="item-text">{item.text}</Header>
                     </List.Item>
                 </Slide>
                 <Slide fraction="0.2" cascade triggerOnce>
@@ -47,9 +45,7 @@ const C = ( {data} ) => {
                             <CircularProgressbar
                             value={value}
                             text={`${roundedValue}%`}
-                            >
-                                <div>{item.text}</div>
-                            </CircularProgressbar>
+                            />
                         );
                         }}
                     </AnimatedProgressProvider>

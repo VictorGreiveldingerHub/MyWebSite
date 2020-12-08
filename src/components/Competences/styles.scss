@@ -26,6 +26,11 @@
     border: none;
     width: 150px;
 }
+
+#item-text {
+    text-transform: uppercase;
+    margin-bottom: 3px;
+}
 /////////////////HOVER POPUP TEST avec react awesome reveal////////////
 .CircularProgressbar .CircularProgressbar-trail {
     stroke: white;

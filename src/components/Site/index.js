@@ -58,9 +58,9 @@ const Site = () => {
 
   return (
     <div id="app">
-      <div id="top" className="background-picture">
+      <div id="top" id="background-picture">
         <div style={sectionStyle}>
-          <Container style={{padding: '13%'}}>
+          <Container id="header-container">
             <Image
               src={Logo}
               size='tiny'
@@ -68,109 +68,74 @@ const Site = () => {
               id="logo"
               centered
             />
-
             <Header
               as='h1'
               id="name-header"
               textAlign='center'
               inverted
             >
-            <Zoom top cascade>
-              Victor Greiveldinger
-            </Zoom>
+            <Roll bot cascade>Victor Greiveldinger</Roll>
             </Header>
             <Header
               as='h2'
-              content=''
               textAlign='center'
               inverted
             >
-            <Roll top cascade>
-              Développeur Web & Web Mobile Junior
-            </Roll>
+            <Roll top cascade>Développeur Web & Web Mobile Junior</Roll>
             </Header>
-            <OnDesktop>
-              <a href="#profil-segment">
-                <Icon id="arrowdown" inverted color="white" name="angle double down" size="huge" />
-              </a>
-            </OnDesktop>
-                      
           </Container>
+        <a href="#profil-segment">
+          <Icon id="arrowdown" inverted color="white" name="angle double down" size="huge" />
+        </a>
         </div>
       </div>
-      <Grid centered columns={1}>
-        <Grid.Column>
-          <Ref innerRef={contextRef}>
-            <Segment id="main-segment">
+        <Ref innerRef={contextRef}>
+          <Segment id="main-segment">
             <OnDesktop>
-              <Rail position='left'>
+              <Rail internal position='left'>
                 <Sticky
-                  bottomOffset={50}
                   context={contextRef}
-                  offset={25}
+                  offset={50}
                   pushing
                   id="sticky-segment"
                 >
-                  <Menu vertical style={{width:'144px', marginLeft:'63px'}}>
-                    <Menu.Item
-                    name='profil'
-                    >
-                    <Header as='h4'>
-                      <a href="#profil-segment">
-                        Profil
-                      </a>
-                    </Header>
-                    </Menu.Item>
-
-                    <Menu.Item
-                    name='competences'
-                    >
-                    <Header as='h4'>
-                      <a href="#segment-competences">
-                        Compétences
-                      </a>
-                    </Header>
-                    </Menu.Item>
-                    <Menu.Item
-                    name='experiences'
-                    >
-                    <Header as='h4'>
-                      <a href="#experience-segment">
-                        Expériences
-                      </a>
-                    </Header>
-                    </Menu.Item>
-                    <Menu.Item
-                    name='projets'
-                    >
-                    <Header as='h4'>
-                      <a href="#realisation-segment">
-                        Projets
-                      </a>
-                    </Header>
-                    </Menu.Item>
-                    <Menu.Item
-                    name='contact'
-                    >
-                    <Header as='h4'>
-                      <a href="#footer">
-                        Contact
-                      </a>
-                    </Header>
-                    </Menu.Item>
-                  </Menu>
-                </Sticky>
-              </Rail>
-              </OnDesktop>
-              <Profil />
-              <Competences data={dataCompetences}/>    
-              <Experiences />
-              <Realisations />
-              <Footer />
-            </Segment>
-          </Ref>
-        </Grid.Column>
-      </Grid>
+              <Menu vertical>
+                <Menu.Item name='profil'>
+                  <Header as='h4'>
+                    <a href="#profil-segment">Profil</a>
+                  </Header>
+                </Menu.Item>
+                <Menu.Item name='competences'>
+                  <Header as='h4'>
+                    <a href="#segment-competences">Compétences</a>
+                  </Header>
+                </Menu.Item>
+                <Menu.Item name='experiences'>
+                  <Header as='h4'>
+                    <a href="#experience-segment">Expériences</a>
+                  </Header>
+                </Menu.Item>
+                <Menu.Item name='projets'>
+                  <Header as='h4'>
+                    <a href="#realisation-segment">Projets</a>
+                  </Header>
+                </Menu.Item>
+                <Menu.Item name='contact'>
+                  <Header as='h4'>
+                    <a href="#footer">Contact</a>
+                  </Header>
+                </Menu.Item>
+              </Menu>
+            </Sticky>
+          </Rail>
+          </OnDesktop>
+          <Profil />
+          <Competences data={dataCompetences}/>    
+          <Experiences />
+          <Realisations />
+          <Footer />
+        </Segment>
+      </Ref>
     </div>
   );
 };

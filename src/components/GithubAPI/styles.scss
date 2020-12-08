@@ -1,0 +1,17 @@
+.app {
+    width: auto;
+    margin: 1em auto;
+    text-align: center;
+
+    & .ui.input {
+        width: auto;
+    }
+    // Pour le composant Indication
+    & .indication-container {
+        border: 1px solid #000;
+        margin: 2em;
+        padding: 1em;
+        border-radius: 5px;
+        text-align: left;
+    };
+};

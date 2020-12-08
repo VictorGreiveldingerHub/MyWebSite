@@ -12,7 +12,7 @@ import {
 } from 'semantic-ui-react';
 
 import { motion } from "framer-motion";
-import { Zoom } from 'react-reveal';
+import { Zoom, Flip } from 'react-reveal';
 
 import Profil from 'src/assets/Images/profil.png';
 import Opquast from 'src/assets/Images/Opquast.png';
@@ -89,9 +89,11 @@ const C = () => {
                                 whileHover={{ scale: 1.1 }}
                                 whileTap={{ scale: 0.9 }}
                             >
+                            <Flip top>
                             <Button id="buttonWhy">
                                 O'clock ?
                             </Button>
+                            </Flip>
                             </motion.button>
                         }
                         >
@@ -143,9 +145,11 @@ const C = () => {
                                 whileHover={{ scale: 1.1 }}
                                 whileTap={{ scale: 0.9 }}
                             >
+                            <Flip top>
                             <Button id="buttonWhy">
                                 Opquast® ?
                             </Button>
+                            </Flip>
                             </motion.button>
                         }
                         >
@@ -187,9 +191,11 @@ const C = () => {
                                 whileHover={{ scale: 1.1 }}
                                 whileTap={{ scale: 0.9 }}
                             >
+                            <Flip top>
                             <Button id="buttonWhy">
                                 eLAO ?
                             </Button>
+                            </Flip>
                             </motion.button>
                         }
                         >

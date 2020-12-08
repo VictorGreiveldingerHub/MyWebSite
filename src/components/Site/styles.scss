@@ -1,40 +1,54 @@
-body {
-    width: 100%;
-}
-#app {
-    font-family: 'Open Sans', sans-serif !important;
-}
-
 @media (max-width: 992px) {
     #main-segment {
-        margin: 0 !important;
-    }
-}
+        padding: 0 5% !important;
+    };
+
+    #header-container {
+        width: 100% !important;
+    };
+
+    #arrowdown {
+    position: absolute;
+    bottom: 0 !important;
+    left: 40% !important;
+    animation: bounce 0.7s ease infinite;
+    };
+};
 
 #main-segment {
-    margin: 0 20%;
+    padding: 5% 25%;
+    margin: 0;
+    border-style: none;
+    border-width: 0px;
+    border-color: rgba(135, 150, 180, 0.1)
 };
 
 #sticky-segment {
-    margin-left: 70px;
-}
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    left: 0;
+};
 
 #arrowdown {
     position: absolute;
     bottom: 0;
-    left: 5%;
-    background-color: transparent;
-    z-index: 6;
-    width: 11%;
-    height: 16%;
-    padding-top: 27px;
+    left: 10%;
     animation: bounce 0.7s ease infinite;
 };
 
 @keyframes bounce {
     from {transform: translateY(0);}
     to {transform: translateY(-20px);}
-}
+};
+
 .ui.text.container {
     width: fit-content;
-}
+};
+
+#header-container {
+    top: 50%;
+    left:50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+};

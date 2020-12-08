@@ -2,3 +2,26 @@
     width: fit-content;
     margin: auto;
 }
+
+#experience {
+    box-shadow: -1px 3px 20px 3px #8796;
+    transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+    transform-style: preserve-3d;
+    transition: box-shadow 400ms ease;
+    border-style: none;
+    border-width: 1px;
+    border-color: rgba(135, 150, 180, 0.3);
+    padding: 0;
+    margin: 20px 0px;
+};
+
+#experience:hover {
+    box-shadow: none;
+    border-width: 0px;
+};
+
+#header-realisation {
+    margin-bottom: 0px;
+    padding: 10px 40px;
+    background-color: #0b3954;
+};
