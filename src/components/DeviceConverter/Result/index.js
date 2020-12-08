@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Header } from 'semantic-ui-react'
 
 import 'semantic-ui-css/semantic.min.css';
-// import './styles.scss';
+import './styles.scss';
 
 // Dans Result on veut récuperer :
 //  - la valeur de la device cliqué,

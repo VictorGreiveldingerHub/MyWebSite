@@ -8,7 +8,7 @@ import List from 'src/components/DeviceConverter/List';
 import Result from 'src/components/DeviceConverter/Result';
 import initialCurrencies from 'src/data/currencies.js';
 
-// import './styles.scss';
+import './styles.scss';
 import 'semantic-ui-css/semantic.min.css';
 
 const DeviceConverter = () => {

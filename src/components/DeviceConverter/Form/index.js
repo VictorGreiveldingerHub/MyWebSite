@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Header, Input, Form as Formulaire } from 'semantic-ui-react';
 
 import 'semantic-ui-css/semantic.min.css';
-// import './styles.scss';
+import './styles.scss';
 
 /* Prendre en compte le formulaire de l(utilisateur )
     Par défault la valeur est définie en € et est de 1,

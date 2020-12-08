@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-// import './styles.scss';
+import './styles.scss';
 
 // Dans List, on veut recuperer :
 //  - le nom de la device cliqué,
@@ -11,7 +11,7 @@ const List = ({initialCurrencies, handleClick}) => {
     
     const currenciesJSX = initialCurrencies.map((currencie) => {
         return (
-            <li key={currencie.name}>
+            <li id="li-converter" key={currencie.name}>
                 <button 
                     onClick={() => {handleClick(currencie.name, currencie.rate)}}
                 >{currencie.name}</button>
@@ -20,7 +20,7 @@ const List = ({initialCurrencies, handleClick}) => {
     });
 
     return (
-        <ul className="list">
+        <ul id="list-converter">
             {currenciesJSX}
         </ul>
     );

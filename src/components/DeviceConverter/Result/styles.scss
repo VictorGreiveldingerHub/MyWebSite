@@ -1,0 +1,18 @@
+.result {
+    background-color:  #EFEFEF;
+    color: rgb(202, 123, 50);
+    height: 125px;
+    padding: 2em;
+    text-align: center;
+    border-top: 1px solid rgb(207, 204, 204);
+
+    & .value {
+        font-size: 30px;
+        font-weight: 600;
+    }
+
+    .ui.block.header {
+        margin-top: 0.5em;
+        color: rgb(202, 123, 50);
+    }
+}

@@ -26,13 +26,9 @@ const C = () => {
     const [openOpquast, setOpenOpquast] = useState(false);
     return (
         <Segment id="profil-segment" vertical textAlign='center'>
-        <Header
-          as='h2'
-        >
-        <Zoom top cascade>
-            Profil
-        </Zoom>
-        </Header>
+            <Header as='h2'>
+                <Zoom top cascade>Profil</Zoom>
+            </Header>
         <Header
             as='h3'
             content="Tout droit sorti d'une formation de 5 mois chez O'Clock, je suis aujourd'hui impatient de travailler"

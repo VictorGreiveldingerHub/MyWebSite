@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-//import 'src/components/List/styles.scss';
+import './styles.scss';
 
 const List = ({handleCheckboxChange, tasks} ) => {
 // On récupère la data grâce aux props

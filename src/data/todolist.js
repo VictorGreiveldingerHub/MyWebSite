@@ -1,12 +1,7 @@
 export default [
   {
-    id: 3,
-    text: 'Implémenter une app React avec GitHub API',
-    done: false,
-  },
-  {
     id: 4,
-    text: 'Chercher un travail / stage au Luxembourg',
+    text: 'Trouver un travail / stage au Luxembourg',
     done: false,
   },
   {

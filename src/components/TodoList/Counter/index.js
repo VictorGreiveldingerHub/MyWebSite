@@ -1,5 +1,4 @@
 import React from 'react';
-// import './styles.scss'; 
 
 const Counter = ({nbCurrentTasks}) => {
   
@@ -9,7 +8,15 @@ const Counter = ({nbCurrentTasks}) => {
   };
 console.log(taskSentence);
   return (
-    <div id="todo-counter">{nbCurrentTasks} {taskSentence} à faire</div>
+    <div id="todo-counter" style={{
+      marginTop: "2em",
+      fontSize: "1.3em",
+      color: "white",
+      borderBottom: "1px solid white",
+      padding: ".5em 0",
+    }}>
+    {nbCurrentTasks} {taskSentence} à faire
+    </div>
   );
 };
 

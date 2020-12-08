@@ -85,7 +85,11 @@ const Site = () => {
             </Header>
           </Container>
         <a href="#profil-segment">
-          <Icon id="arrowdown" inverted color="white" name="angle double down" size="huge" />
+          <Icon
+            id="arrowdown"
+            name="angle double down"
+            size="huge"
+          />
         </a>
         </div>
       </div>
