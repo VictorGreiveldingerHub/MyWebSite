@@ -1,18 +1,22 @@
 export default [
     {
-        title: 'Profil',
-        color: '#ff0055',
+        header: 'Profil',
+        ref: "#profil-segment",
     },
     {
-        title: 'Compétences',
-        color: '#0099FF',
+        header: 'Compétences',
+        ref: "#competences-segment",
     },
     {
-        title: 'Expériences',
-        color: '#22cc88',
+        header: 'Expériences',
+        ref: "#experience-segment",
     },
     {
-        title: 'Projets',
-        color: '#ffaa00',
+        header: 'Projets',
+        ref: "#realisation-segment",
+    },
+    {
+        header: 'Contact',
+        ref: "#contact-segment",
     }, 
 ];

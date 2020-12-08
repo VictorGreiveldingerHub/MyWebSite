@@ -56,11 +56,9 @@ const C = ( {data} ) => {
     });
   
     return (
-        <Segment id="segment-competences" vertical textAlign='center'>
+        <Segment id="competences-segment" vertical textAlign='center'>
             <Header as='h2'>
-            <Zoom top cascade>
-            Compétences
-            </Zoom>   
+                <Zoom top cascade>Compétences</Zoom>   
             </Header>
             <List id="list-item">
                 {competencesJSX}

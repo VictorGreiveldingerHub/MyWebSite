@@ -1,11 +1,9 @@
 // == Npm Import
 import React from 'react';
-import PropTypes from 'prop-types';
 import {
     Container,
     Segment,
     Divider,
-    Grid,
     List,
     Image,
     Header,
@@ -25,14 +23,13 @@ const C = () => {
     const year = now.getFullYear();
 
     return (
-        <Segment vertical id="footer">
+        <Segment vertical id="contact-segment">
             <Divider horizontal>
                 <Roll bottom>
                     <img src={Logo}/>
                 </Roll>
             </Divider>
-            
-                <List id="list">
+            <List id="list">
                 <Fade top cascade>
                     <List.Item id="list-item">
                         <a href='https://github.com/VictorGreiveldingerHub' target='no_blank'>
@@ -49,9 +46,8 @@ const C = () => {
                             <Image id="list-logo" src={Facebook}/>
                         </a>
                     </List.Item>
-                    </Fade>
-                </List>
-              
+                </Fade>
+            </List>  
             <Container id="last" textAlign="center">
                 <Header as='h4'>Site réalisé par - Victor Greiveldinger - {year} ©</Header> 
             </Container>

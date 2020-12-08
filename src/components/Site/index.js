@@ -7,19 +7,19 @@ import {
   Image,
   Container,
   Segment,
-  Grid,
   Ref,
   Menu,
   Rail,
   Sticky,
 } from 'semantic-ui-react';
 
-import { Zoom, Roll } from 'react-reveal';
+import { Roll } from 'react-reveal';
 
 // == Import data & images & styles
 import Logo from 'src/assets/Images/Final.svg';
 import BackgroundPicture from 'src/assets/Images/ba.jpg';
 import dataCompetences from 'src/data/competences.js';
+import titles from 'src/data/title.js';
 import './styles.scss';
 
 // == Components Imports
@@ -56,6 +56,16 @@ const Site = () => {
   
   const contextRef = createRef();
 
+  const menuJSX = titles.map((title) => {
+    return (
+      <Menu.Item>
+        <Header id="main-header" as='h4'>
+          <a href={title.ref}>{title.header}</a>
+        </Header>
+      </Menu.Item>
+    );
+  });
+
   return (
     <div id="app">
       <div id="top" id="background-picture">
@@ -74,14 +84,10 @@ const Site = () => {
               textAlign='center'
               inverted
             >
-            <Roll bot cascade>Victor Greiveldinger</Roll>
+              <Roll bot cascade>Victor Greiveldinger</Roll>
             </Header>
-            <Header
-              as='h2'
-              textAlign='center'
-              inverted
-            >
-            <Roll top cascade>Développeur Web & Web Mobile Junior</Roll>
+            <Header as='h2' textAlign='center' inverted>
+              <Roll top cascade>Développeur Web & Web Mobile Junior</Roll>
             </Header>
           </Container>
         <a href="#profil-segment">
@@ -89,6 +95,7 @@ const Site = () => {
             id="arrowdown"
             name="angle double down"
             size="huge"
+            inverted
           />
         </a>
         </div>
@@ -104,31 +111,7 @@ const Site = () => {
                   id="sticky-segment"
                 >
               <Menu vertical>
-                <Menu.Item name='profil'>
-                  <Header as='h4'>
-                    <a href="#profil-segment">Profil</a>
-                  </Header>
-                </Menu.Item>
-                <Menu.Item name='competences'>
-                  <Header as='h4'>
-                    <a href="#segment-competences">Compétences</a>
-                  </Header>
-                </Menu.Item>
-                <Menu.Item name='experiences'>
-                  <Header as='h4'>
-                    <a href="#experience-segment">Expériences</a>
-                  </Header>
-                </Menu.Item>
-                <Menu.Item name='projets'>
-                  <Header as='h4'>
-                    <a href="#realisation-segment">Projets</a>
-                  </Header>
-                </Menu.Item>
-                <Menu.Item name='contact'>
-                  <Header as='h4'>
-                    <a href="#footer">Contact</a>
-                  </Header>
-                </Menu.Item>
+                {menuJSX}
               </Menu>
             </Sticky>
           </Rail>

@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-import PropTypes from 'prop-types';
 import {
     Segment,
     Header,
@@ -10,10 +9,10 @@ import {
     List,
     Popup,
 } from 'semantic-ui-react';
-
 import { motion } from "framer-motion";
 import { Zoom, Flip } from 'react-reveal';
 
+// Import images + styles
 import Profil from 'src/assets/Images/profil.png';
 import Opquast from 'src/assets/Images/Opquast.png';
 import eLAO from 'src/assets/Images/eLAO.png';

@@ -1,26 +1,15 @@
 // Import Npm
-import React, {useState} from 'react';
-import PropTypes from 'prop-types';
+import React from 'react';
 import {
     Segment,
     Header,
     Grid,
     Container,
-    Divider,
     Button,
-    Modal,
-    Image,
 } from 'semantic-ui-react';
-import {Pulse, Flip, Roll} from 'react-reveal';
-// First, you fetch your imports
-import {useSpring, animated} from 'react-spring';
-import { Slide } from "react-awesome-reveal";
-import { motion } from "framer-motion";
-
-
+import { Flip, Roll } from 'react-reveal';
 
 // Import data, styles
-import cards from 'src/data/card.js';
 import './styles.scss';
 
 import GithubAPI from 'src/components/GithubAPI';
@@ -28,7 +17,6 @@ import TodoList from 'src/components/TodoList';
 import DeviceConverter from 'src/components/DeviceConverter';
 
 const C = () => {
-    const [open, setOpen] = useState(false);
     return (
         <Segment id="realisation-segment" vertical textAlign='center'>
             <Header as='h2'>

@@ -1,16 +1,15 @@
 import React, {useState} from 'react';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import {
     Container,
     Segment,
     Header,
     Loader,
     Item,
-    Divider,
     Modal,
     Button,
 } from 'semantic-ui-react';
-import { Roll, Zoom, Fade } from 'react-reveal';
+import { Roll, Fade } from 'react-reveal';
 import './styles.scss';
 
 
