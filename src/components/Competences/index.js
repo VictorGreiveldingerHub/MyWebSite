@@ -13,7 +13,6 @@ import { easeQuadInOut } from "d3-ease";
 import AnimatedProgressProvider from "./animated.js";
 import { Zoom } from 'react-reveal';
 import { Slide } from "react-awesome-reveal";
-
 import './styles.scss';
 
 const C = ( {data} ) => {

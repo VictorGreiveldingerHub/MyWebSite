@@ -9,7 +9,7 @@ import {
     Modal,
     Button,
 } from 'semantic-ui-react';
-import { Roll, Fade } from 'react-reveal';
+import { Roll } from 'react-reveal';
 import './styles.scss';
 
 
@@ -18,13 +18,12 @@ const C = () => {
     const [openPair, setOpenPair] = useState(false);
     return (
         <Segment vertical textAlign='center' id="experience-segment">
-            
-                <Header as='h2'>
+            <Header as='h2'>
                 <Roll left cascade>
                     Expériences
                 </Roll>
-                </Header>
-                <Item.Group>
+            </Header>
+            <Item.Group>
                 <Segment id="experience">
                     <Item>
                         <Item.Content>
@@ -92,9 +91,7 @@ const C = () => {
                                     }}>
                                     <Item.Meta>Imprimerie Centrale - Luxembourg</Item.Meta>
                                     <Item.Description>
-                                        Mise en machine de feuille pour produire des magazines, journaux.
-                                        Nettoyage des locaux
-                                        Empaquettage divers.
+                                        Mise en machine. Nettoyage des locaux. Empaquettage divers.
                                     </Item.Description>
                                 <Item.Extra>Job d'été</Item.Extra>
                             </Container>

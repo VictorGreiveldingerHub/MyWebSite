@@ -1,13 +1,8 @@
 import React from 'react';
 import { Card, Image } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
-// import ModalTest from 'src/components/ModalTest';
 
 const C = ({ item, name, description}) => {
-    // const extra = (
-    //     <ModalTest />
-    // );
-
     return (
         <Card>
             <Image src={item.avatar_url} wrapped ui={false} />

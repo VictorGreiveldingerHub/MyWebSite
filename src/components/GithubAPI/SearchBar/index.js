@@ -12,7 +12,6 @@ const SearchBar = ({ handleChange, value, handleSubmit, loading}) => {
             <Form onSubmit={handleSubmit}>
                 <Form.Field>
                     <Input
-                        style={{}}
                         icon='search' 
                         iconPosition='left' 
                         placeholder='Saisir une valeur => React par exemple'
