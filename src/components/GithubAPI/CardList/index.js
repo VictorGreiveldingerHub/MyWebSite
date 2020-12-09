@@ -21,7 +21,7 @@ const CardList = ({ items, loading }) => {
 
     return (
         <Segment loading={loading}>
-            <Card.Group itemsPerRow={3}>
+            <Card.Group itemsPerRow={2}>
                 {cardListJSX}
             </Card.Group>
         </Segment>
