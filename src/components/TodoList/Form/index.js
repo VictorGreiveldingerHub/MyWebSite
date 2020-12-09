@@ -23,12 +23,10 @@ const Form = ({ text, addTask, updateText }) => {
           value={text}
           style={{
             width: "100%",
-            color: "white",
+            color: "rgb(233, 232, 232)",
             fontSize: "2em",
             height: "3em",
-            background: "green",
-            border: "1px solid",
-            boxShadow: "inset 0 0 25px",
+            border: "1px solid rgb(233, 232, 232)",
             padding: "1em",
           }}
         />

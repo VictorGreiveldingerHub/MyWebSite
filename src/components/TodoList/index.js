@@ -1,5 +1,6 @@
 // == Import npm
 import React, { useState } from 'react';
+import { Container } from 'semantic-ui-react';
 
 // == Import
 import Form from 'src/components/TodoList/Form';
@@ -23,7 +24,6 @@ const TodoList = () => {
   };
 
   const nbCurrentTasks = tasks.filter((task) => {
-    console.log(task.done);
     return !task.done;
   }).length;
 
@@ -49,7 +49,13 @@ const TodoList = () => {
   };
 
   return (
-    <div id="todo">
+    <Container style={{
+      width: "auto",
+      margin: "3em auto",
+      padding: "5px",
+      }}
+      fluid
+      >
       <Form 
         text={newTaskText}
         addTask={addTask}
@@ -60,7 +66,7 @@ const TodoList = () => {
         handleCheckboxChange={handleCheckboxChange}
         tasks={tasks}
       />
-    </div>
+    </Container>
   );
 };
 

@@ -13,7 +13,7 @@ const Indication = ( {message} ) => {
 };
 
 Indication.propTypes = {
-    message: PropTypes.number.isRequired,
+    message: PropTypes.string.isRequired,
 };
 
 export default Indication;

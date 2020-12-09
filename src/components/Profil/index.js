@@ -85,7 +85,7 @@ const C = () => {
                                 whileTap={{ scale: 0.9 }}
                             >
                             <Flip top>
-                            <Button id="buttonWhy">
+                            <Button primary id="buttonWhy">
                                 O'clock ?
                             </Button>
                             </Flip>
@@ -141,7 +141,7 @@ const C = () => {
                                 whileTap={{ scale: 0.9 }}
                             >
                             <Flip top>
-                            <Button id="buttonWhy">
+                            <Button primary id="buttonWhy">
                                 Opquast® ?
                             </Button>
                             </Flip>
@@ -187,7 +187,7 @@ const C = () => {
                                 whileTap={{ scale: 0.9 }}
                             >
                             <Flip top>
-                            <Button id="buttonWhy">
+                            <Button primary id="buttonWhy">
                                 eLAO ?
                             </Button>
                             </Flip>

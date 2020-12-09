@@ -1,5 +1,6 @@
 /*
- * Fond = `#2e5849`
+ * Couleur de Fond Boutons = ` #6F1D1F`
+ * Couleur ecriture bouton = ` #BB9457`
  * Fond Input = `#1c382f`
  * Bordure Input = `#183129`
  * Ombre interne Input = `25px` `rgba(0,0,0,.1)`
@@ -11,7 +12,7 @@
  */
 
 // Base colors
-$white: #fff;
+$white: rgb(235, 235, 235);
 
 // General purpose
 $text-color: #333;
@@ -25,6 +26,10 @@ $input-shadow-color: rgba(0,0,0,.1);
 $input-shadow-focus-color: rgba(0,0,0,.5);
 $input-text-color: $white;
 $input-placeholder-color: rgba(255, 255, 255, .5);
+
+// Button styles
+$button-background-color: #6F1D1F;
+$button-color: #e7ba72;
 
 // Task
 $task-background-color: #eee;

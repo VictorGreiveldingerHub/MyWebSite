@@ -49,7 +49,7 @@ const C = () => {
                 </Fade>
             </List>  
             <Container id="last" textAlign="center">
-                <Header as='h4'>Site réalisé par - Victor Greiveldinger - {year} ©</Header> 
+                <Header as='h4'>Victor Greiveldinger - {year} ©</Header> 
             </Container>
         </Segment>
     );

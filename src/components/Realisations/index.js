@@ -31,7 +31,8 @@ const C = () => {
                         <Container>
                             <GithubAPI /> 
                             <Flip top>
-                                <Button>Voir le code</Button>
+                                <Button id="projet-button">
+                                <a href="https://github.com/VictorGreiveldingerHub/React-GitHub-API" target="no_blank">Voir le code</a></Button>
                             </Flip> 
                         </Container>    
                     </Segment>
@@ -42,16 +43,18 @@ const C = () => {
                         <Container>
                             <TodoList />  
                         </Container>
-                        <Button>Voir le code</Button>
+                        <Button id="projet-button">
+                            <a href="https://github.com/VictorGreiveldingerHub/TodoListReact" target="no_blank">Voir le code</a></Button>
                     </Segment>
                 </Grid.Column>
                 <Grid.Column>
                     <Segment id="projet-segment">
-                        <Header inverted id="header-projet">React TodoList ⚡️</Header>
+                        <Header inverted id="header-projet">Device Converter ⚡️</Header>
                         <Container>
                             <DeviceConverter />
                         </Container>
-                        <Button>Voir le code</Button>
+                        <Button id="projet-button">
+                        <a href="https://github.com/VictorGreiveldingerHub/Device-converter" target="no_blank">Voir le code</a></Button>
                     </Segment>
                 </Grid.Column>
             </Grid>

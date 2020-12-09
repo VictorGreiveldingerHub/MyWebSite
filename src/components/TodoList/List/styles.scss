@@ -6,15 +6,15 @@
  * Items
  */
 .todo {
-  background: green;
-  border: 1px solid white;
+  border: 1px solid rgb(233, 232, 232);
   border-radius: .3em;
   font-size: 1.2em;
   padding: 1em;
   margin: .5em 0;
+  text-align: left;
 }
 .todo--done {
-  opacity: .5;
+  opacity: .3;
 }
 
 .todo-text {

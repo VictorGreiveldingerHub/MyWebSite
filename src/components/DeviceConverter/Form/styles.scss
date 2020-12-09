@@ -1,16 +1,16 @@
-.form {
+#form {
     background-color: rgb(202, 123, 50);
     height: 125px;
     text-align: center;
     padding-top: 5px;
 }
 
-.ui.header:first-child {
+#convertisseur-header {
     color: #fff;
 };
 
 #todo-form {
     height: min-content;
-    width: fit-content;
-    margin-left: 5em;
+    width: auto;
+    margin: auto;
 };

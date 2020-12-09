@@ -1,8 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Header, Input, Form as Formulaire } from 'semantic-ui-react';
-
-import 'semantic-ui-css/semantic.min.css';
 import './styles.scss';
 
 /* Prendre en compte le formulaire de l(utilisateur )
@@ -19,8 +17,8 @@ const Form = ( {value, handleChangeInput}) => {
     };
 
     return (
-        <div className="form" onSubmit={handleSubmit}>
-            <Header as="h1">Convertisseur</Header>
+        <div id="form" onSubmit={handleSubmit}>
+            <Header as="h1" id="convertisseur-header">Convertisseur</Header>
             <Formulaire id="todo-form">
                 <Input
                     type="text"

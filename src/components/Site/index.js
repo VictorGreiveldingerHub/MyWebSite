@@ -45,8 +45,8 @@ const Site = () => {
   const layout = layoutGenerator({
     mobile: 0,
     phablet: 550,
-    tablet: 768,
-    desktop: 992,
+    tablet: 950,
+    desktop: 951,
   });
 
   const OnMobile = layout.is('mobile');
@@ -58,10 +58,8 @@ const Site = () => {
 
   const menuJSX = titles.map((title) => {
     return (
-      <Menu.Item>
-        <Header id="main-header" as='h4'>
-          <a href={title.ref}>{title.header}</a>
-        </Header>
+      <Menu.Item id="placement-titres">
+        <a href={title.ref}>{title.header}</a>
       </Menu.Item>
     );
   });
@@ -86,31 +84,40 @@ const Site = () => {
             >
               <Roll bot cascade>Victor Greiveldinger</Roll>
             </Header>
-            <Header as='h2' textAlign='center' inverted>
-              <Roll top cascade>Développeur Web & Web Mobile Junior</Roll>
+            <Header as='h2' textAlign='center' inverted id="second-header">
+              <Roll bot cascade>Développeur Web & Web Mobile Junior</Roll>
             </Header>
           </Container>
-        <a href="#profil-segment">
-          <Icon
-            id="arrowdown"
-            name="angle double down"
-            size="huge"
-            inverted
-          />
-        </a>
+          <OnDesktop>
+            <div id="arrow-animated">
+              <a href="#profil-segment">
+                <Icon
+                  id="arrowdown"
+                  name="angle double down"
+                  size="huge"
+                  inverted
+                />
+              </a>
+            </div>
+          </OnDesktop>
         </div>
       </div>
         <Ref innerRef={contextRef}>
           <Segment id="main-segment">
+            <OnAtMostPhablet>
+              <Menu inverted id="menu-inverted">
+                {menuJSX}
+              </Menu>
+            </OnAtMostPhablet>
             <OnDesktop>
-              <Rail internal position='left'>
+              <Rail internal position='left' id="internal-rail">
                 <Sticky
                   context={contextRef}
                   offset={50}
                   pushing
                   id="sticky-segment"
                 >
-              <Menu vertical>
+              <Menu vertical inverted id="menu-sticky">
                 {menuJSX}
               </Menu>
             </Sticky>

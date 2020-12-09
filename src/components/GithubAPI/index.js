@@ -1,5 +1,5 @@
 // == Import npm
-import React, {useState, useEffect, useReducer} from 'react';
+import React, { useEffect, useReducer} from 'react';
 import axios from 'axios';
 
 // == Import
@@ -8,6 +8,7 @@ import Indication from 'src/components/GithubAPI/Indication';
 import CardList from 'src/components/GithubAPI/CardList';
 import Header from 'src/components/GithubAPI/Header';
 import './styles.scss';
+import { Container } from 'semantic-ui-react';
 
 const GITHUB_API = "https://api.github.com/search/repositories?q=";
 const DEFAULT_QUERY = "";
@@ -71,7 +72,14 @@ const GithubAPI = () => {
   useEffect (fetchRepos, []);
 
   return (
-    <div className="app">
+    <Container 
+      style={{
+        width: "auto",
+        margin: "3em auto",
+        padding: "5px",
+      }}
+      fluid
+    >
       <Header />
       <SearchBar
         loading={state.loading}
@@ -81,7 +89,7 @@ const GithubAPI = () => {
       />
       <Indication message={state.message}/>
       <CardList items={state.initialData} loading={state.loading} />
-    </div>
+    </Container>
   );
 };
 

@@ -1,17 +1,16 @@
-@media (max-width: 992px) {
+@media (max-width: 500px) {
+    #second-header {
+        font-size: initial;
+    }
+}
+@media (max-width: 951px) {
     #main-segment {
-        padding: 0 5% !important;
+        padding: 0 2% !important;
     };
 
     #header-container {
-        width: 100% !important;
-    };
-
-    #arrowdown {
-    position: absolute;
-    bottom: 0 !important;
-    left: 40% !important;
-    animation: bounce 0.7s ease infinite;
+        width: 90% !important;
+        margin: 0 !important;
     };
 };
 
@@ -20,20 +19,15 @@
     margin: 0;
     border-style: none;
     border-width: 0px;
-    border-color: rgba(135, 150, 180, 0.1)
+    border-color: rgba(135, 150, 180, 0.1);
 };
 
-#sticky-segment {
-    position: absolute;
-    margin: 0;
-    padding: 0;
-    left: 0;
-};
-
+////////// Pour l'arrow 
 #arrowdown {
     position: absolute;
     bottom: 0;
-    left: 10%;
+    width: 161px;
+    left: 4%;
     animation: bounce 0.7s ease infinite;
 };
 
@@ -41,14 +35,46 @@
     from {transform: translateY(0);}
     to {transform: translateY(-20px);}
 };
-
-.ui.text.container {
-    width: fit-content;
-};
-
+///////////// Section Nom et Prenom 
 #header-container {
     top: 50%;
     left:50%;
     position: absolute;
     transform: translate(-50%, -50%);
 };
+
+/////////////////// Pour le menu
+
+#internal-rail {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    width: auto;
+    left: 5%;
+}
+#menu-inverted #placement-titres {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    padding: 5px;
+};
+
+#menu-inverted {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    z-index:1;
+}
+
+#menu-sticky {
+    width: 10rem;
+}
+
+#menu-sticky #placement-titres {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
