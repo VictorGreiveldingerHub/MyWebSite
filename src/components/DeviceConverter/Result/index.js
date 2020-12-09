@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Header } from 'semantic-ui-react'
+import { Header, Container } from 'semantic-ui-react'
 
 import 'semantic-ui-css/semantic.min.css';
 import './styles.scss';
@@ -14,10 +14,10 @@ const Result = ( {value, currencies, inputValue} ) => {
     const multiplier = inputValue * value;
 
     return (
-        <div className="result">
+        <Container className="result">
             <span className="value">{multiplier}</span>
             <Header as='h3' block>{currencies}</Header>
-        </div>
+        </Container>
     );
 };
 

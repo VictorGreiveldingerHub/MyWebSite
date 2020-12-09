@@ -1,4 +1,5 @@
 import React from 'react';
+import { Container } from 'semantic-ui-react';
 
 const Counter = ({nbCurrentTasks}) => {
   
@@ -7,7 +8,7 @@ const Counter = ({nbCurrentTasks}) => {
     taskSentence += 's';
   };
   return (
-    <div id="todo-counter" style={{
+    <Container id="todo-counter" style={{
       marginTop: "1em",
       fontSize: "1.3em",
       color: "black",
@@ -15,7 +16,7 @@ const Counter = ({nbCurrentTasks}) => {
       padding: ".5em 0",
     }}>
     {nbCurrentTasks} {taskSentence} à faire
-    </div>
+    </Container>
   );
 };
 

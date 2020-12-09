@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
+import { List as Liste} from 'semantic-ui-react';
 import './styles.scss';
 
 const List = ({handleCheckboxChange, tasks} ) => {
@@ -12,7 +12,7 @@ const taskJSX = tasks.map(task => {
     if (task.done) taskClassNames += ' todo--done';
 
     return (
-    <li key={task.id} className={taskClassNames}>
+    <Liste.Item key={task.id} className={taskClassNames}>
         <input
           className="todo-check"
           type="checkbox"
@@ -20,14 +20,14 @@ const taskJSX = tasks.map(task => {
           checked={task.done}
         />
         <span className="todo-text">{task.text}</span>
-    </li>
+    </Liste.Item>
     );
 });
 
 return (
-    <ul className="todo-list">
+    <Liste className="todo-list">
         {taskJSX}
-    </ul>
+    </Liste>
   );
 };
 

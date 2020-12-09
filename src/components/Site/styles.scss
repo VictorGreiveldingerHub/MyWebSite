@@ -55,6 +55,7 @@
 #menu-inverted #placement-titres {
     display: flex;
     justify-content: space-between;
+    margin: -2px;
 };
 
 #menu-inverted {
@@ -63,9 +64,10 @@
     left: 0;
     width: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     z-index:1;
     border-radius: initial;
+    height: 80px;
 }
 
 #menu-sticky {
