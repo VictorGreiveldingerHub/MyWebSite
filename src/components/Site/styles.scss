@@ -26,13 +26,15 @@
 #arrowdown {
     position: absolute;
     bottom: 0;
-    width: 161px;
-    left: 4%;
-    animation: bounce 0.7s ease infinite;
+    width: 110px;
+    height: 80px;
+    left: 5%;
+    background-color: #222222;
+    //animation: bounce 0.7s ease infinite;
 };
 
 @keyframes bounce {
-    from {transform: translateY(0);}
+    from {transform: translateY(-10px);}
     to {transform: translateY(-20px);}
 };
 ///////////// Section Nom et Prenom 
@@ -53,9 +55,8 @@
     left: 5%;
 }
 #menu-inverted #placement-titres {
-    display: flex;
-    justify-content: space-between;
     margin: -2px;
+    font-size: smaller;
 };
 
 #menu-inverted {
@@ -63,20 +64,28 @@
     top: 0;
     left: 0;
     width: 100%;
-    display: flex;
-    justify-content: space-evenly;
     z-index:1;
     border-radius: initial;
     height: 80px;
+    display: flex;
+    justify-content: space-evenly;
 }
 
 #menu-sticky {
-    width: 10rem;
+    width: 110px;
     border-radius: initial;
+    background-color: #222222;
 }
 
 #menu-sticky #placement-titres {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: block;
+    text-align: center;
+    height: 80px;
+    padding-top: 30px;
+    font-weight: 600;
+    float: none;
+}
+
+#menu-sticky #placement-titres a {
+    color: white;
 }

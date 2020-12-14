@@ -1,5 +1,6 @@
 // == Import npm
 import React, { createRef } from 'react';
+import { Link } from 'react-router-dom';
 import { layoutGenerator } from 'react-break';
 import {
   Header,
@@ -33,7 +34,7 @@ const Site = () => {
 
   var sectionStyle = {
     width: "100%",
-    height: "666px",
+    height: "100vh",
     marginBottom: "0",
     padding: "0",
     position: 'relative',
@@ -59,7 +60,7 @@ const Site = () => {
   const menuJSX = titles.map((title) => {
     return (
       <Menu.Item id="placement-titres">
-        <a href={title.ref}>{title.header}</a>
+        <Link to={title.ref}>{title.header}</Link>
       </Menu.Item>
     );
   });
@@ -90,14 +91,14 @@ const Site = () => {
           </Container>
           <OnDesktop>
             <div id="arrow-animated">
-              <a href="#profil-segment">
+              <Link to="#profil-segment">
                 <Icon
                   id="arrowdown"
-                  name="angle double down"
+                  name="angle down"
                   size="huge"
                   inverted
                 />
-              </a>
+              </Link>
             </div>
           </OnDesktop>
         </div>
@@ -105,7 +106,7 @@ const Site = () => {
         <Ref innerRef={contextRef}>
           <Segment id="main-segment">
             <OnAtMostPhablet>
-              <Menu inverted id="menu-inverted">
+              <Menu id="menu-inverted">
                 {menuJSX}
               </Menu>
             </OnAtMostPhablet>
@@ -117,7 +118,7 @@ const Site = () => {
                   pushing
                   id="sticky-segment"
                 >
-              <Menu vertical inverted id="menu-sticky">
+              <Menu vertical id="menu-sticky">
                 {menuJSX}
               </Menu>
             </Sticky>
