@@ -60,7 +60,7 @@ const Site = () => {
   const menuJSX = titles.map((title) => {
     return (
       <Menu.Item id="placement-titres">
-        <Link to={title.ref}>{title.header}</Link>
+        <a href={title.ref}>{title.header}</a>
       </Menu.Item>
     );
   });
@@ -91,14 +91,14 @@ const Site = () => {
           </Container>
           <OnDesktop>
             <div id="arrow-animated">
-              <Link to="#profil-segment">
+              <a href="#profil-segment">
                 <Icon
                   id="arrowdown"
                   name="angle down"
                   size="huge"
                   inverted
                 />
-              </Link>
+              </a>
             </div>
           </OnDesktop>
         </div>
